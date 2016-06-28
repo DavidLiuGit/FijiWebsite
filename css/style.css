@@ -806,7 +806,10 @@ border: 2px solid #fff;
 .portfolioContainer{
 	max-width: 1140px;
 }
-
+.portfolioContainer img {
+	width: 300px;
+  	height: 180px;
+}
 
 /* Animation Timers
 ---------------------------------*/
