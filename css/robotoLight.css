@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: "Roboto Light";
+    src: url('../fonts/Roboto/Roboto-Light.ttf') format("truetype");
+}
+p.customfont { 
+    font-family: "Roboto Light", Verdana, Tahoma;
+}
+
+@font-face {
+	font-family: "Roboto Thin";
+	src: url(../fonts/Roboto/Roboto-Thin.ttf) format("truetype");
+}
