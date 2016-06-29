@@ -941,6 +941,7 @@ i{
   content: "\f10d";
 }
 .fa-quote-right:before {
+  color:#fff;
   content: "\f10e";
 }
 .fa-spinner:before {
