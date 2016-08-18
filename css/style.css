@@ -201,8 +201,15 @@ color: #fff;
   /* ...and now override with proper CSS property */
   transition:color .5s ease-out, background 1s ease-in;
 }
-.headLink h2:hover { color:#993399; }
+.headLink h2:hover { 
+	color:#993399; 
+	text-decoration:none !important; 
+}
+.headLink a, a:hover, a:visited, a:link, a:active {
+    text-decoration: none !important;
+}
 
+	
 
 /* Navigation
 ---------------------------------*/
