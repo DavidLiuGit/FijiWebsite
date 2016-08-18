@@ -1,0 +1,13 @@
+SSH:
+using PuTTy, set type to serial, speed to 115200, COMX, where X is the number found for the serial port in device manager
+
+connect; wait a few seconds and hit enter
+login: root
+pw: 123456789
+
+(reboot) if needed
+configure_edison --wifi
+navigate to location of index.js
+forever start index.js
+
+ifconfig, find IP address (wlan0)
