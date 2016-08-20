@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/newtab.html -->
+<html style="background: none;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/extras/log.js"></script>
+
+    <title>FVD Speed Dial</title>
+    
+
+    <link rel="stylesheet" href="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/themes/css.css">
+    <link rel="stylesheet" href="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/bundles/newtab.css">
+
+    <link rel="stylesheet" href="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/themes/fancy.css" id="themeCSS">
+    <script src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/bundles/newtab.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+
+  <body loaded="1" searchenabled="1" dialsearchenabled="1" thumbsmode="custom" displaymode="fancy" displaytype="speeddial" scrollingtype="vertical"><div class="dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon " dir="ltr" id="polygon_C0mQlqWSfWW7move_to" style="display: none;"><table class="dhtmlxMebu_SubLevelArea_Tbl" cellspacing="0" cellpadding="0" border="0"><tbody><tr class="sub_item" id="C0mQlqWSfWW7move_to_gr_1"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Default</div></td><td class="sub_item_hk">&nbsp;</td></tr></tbody></table></div><div class="dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon " dir="ltr" id="polygon_C0mQlqWSfWW7dhxWebMenuTopId" style="display: none;"><table class="dhtmlxMebu_SubLevelArea_Tbl" cellspacing="0" cellpadding="0" border="0"><tbody><tr class="sub_item" id="C0mQlqWSfWW7open_tab"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Open in Tab</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="C0mQlqWSfWW7open_new_tab"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Open in New Tab</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="C0mQlqWSfWW7open_bg_tab"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Open in Background Tab</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="C0mQlqWSfWW7open_incognito_tab"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Open in Incognito window</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_sep"><td colspan="3"><div id="separator_C0mQlqWSfWW7sep" class="sub_sep"></div></td></tr><tr class="sub_item" id="C0mQlqWSfWW7refresh"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Refresh</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="C0mQlqWSfWW7edit"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Edit</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="C0mQlqWSfWW7remove"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Delete dial</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="C0mQlqWSfWW7copy_url"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Copy URL</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="C0mQlqWSfWW7move_to"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Move to</div></td><td class="sub_item_hk"><div class="complex_arrow" id="arrow_C0mQlqWSfWW7move_to"></div></td></tr></tbody></table></div><div class="dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon " dir="ltr" id="polygon_pthnLp67zNCldhxWebMenuTopId" style="display: none;"><table class="dhtmlxMebu_SubLevelArea_Tbl" cellspacing="0" cellpadding="0" border="0"><tbody><tr class="sub_item" id="pthnLp67zNCledit"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Edit</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="pthnLp67zNCldefault_group"><td class="sub_item_icon"><div id="image_pthnLp67zNCldefault_group" class="sub_icon chbx_0"></div></td><td class="sub_item_text"><div class="sub_item_text">Default</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="pthnLp67zNCllast_selected_group"><td class="sub_item_icon"><div id="image_pthnLp67zNCllast_selected_group" class="sub_icon chbx_0"></div></td><td class="sub_item_text"><div class="sub_item_text">Last used group</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="pthnLp67zNClremove"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Remove</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_sep"><td colspan="3"><div id="separator_pthnLp67zNClsep" class="sub_sep"></div></td></tr><tr class="sub_item" id="pthnLp67zNClopen_all"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Open All Dials</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="pthnLp67zNClmanage"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Manage Groups</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="pthnLp67zNClrefresh_all"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Refresh All</div></td><td class="sub_item_hk">&nbsp;</td></tr></tbody></table></div><div class="dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon " dir="ltr" id="polygon_i0KaUErw8R2ndhxWebMenuTopId" style="display: none;"><table class="dhtmlxMebu_SubLevelArea_Tbl" cellspacing="0" cellpadding="0" border="0"><tbody><tr class="sub_item" id="i0KaUErw8R2nedit"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Edit</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="i0KaUErw8R2ndefault_group"><td class="sub_item_icon"><div id="image_i0KaUErw8R2ndefault_group" class="sub_icon chbx_0"></div></td><td class="sub_item_text"><div class="sub_item_text">Default</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="i0KaUErw8R2nremove"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Remove</div></td><td class="sub_item_hk">&nbsp;</td></tr></tbody></table></div><div class="dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon " dir="ltr" id="polygon_ArwQ0hczwCt4dhxWebMenuTopId" style="display: none;"><table class="dhtmlxMebu_SubLevelArea_Tbl" cellspacing="0" cellpadding="0" border="0"><tbody><tr class="sub_item" id="ArwQ0hczwCt4open_tab"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Open in Tab</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="ArwQ0hczwCt4open_new_tab"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Open in New Tab</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="ArwQ0hczwCt4open_bg_tab"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Open in Background Tab</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="ArwQ0hczwCt4open_incognito_tab"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Open in Incognito window</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_sep"><td colspan="3"><div id="separator_ArwQ0hczwCt4sep" class="sub_sep"></div></td></tr><tr class="sub_item" id="ArwQ0hczwCt4refresh"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Refresh</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="ArwQ0hczwCt4add_to_speeddial"><td class="sub_item_icon"><img id="image_ArwQ0hczwCt4add_to_speeddial" class="sub_icon" src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/images/icons/16x16.png"></td><td class="sub_item_text"><div class="sub_item_text">Add To SpeedDial</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="ArwQ0hczwCt4edit"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Edit</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="ArwQ0hczwCt4remove"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Delete dial</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="ArwQ0hczwCt4block"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Block</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="ArwQ0hczwCt4copy_url"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Copy URL</div></td><td class="sub_item_hk">&nbsp;</td></tr></tbody></table></div><div class="dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon " dir="ltr" id="polygon_B7gsAYwXbXlkdhxWebMenuTopId" style="display: none;"><table class="dhtmlxMebu_SubLevelArea_Tbl" cellspacing="0" cellpadding="0" border="0"><tbody><tr class="sub_item" id="B7gsAYwXbXlkopen_tab"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Open in Tab</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="B7gsAYwXbXlkopen_new_tab"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Open in New Tab</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="B7gsAYwXbXlkopen_bg_tab"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Open in Background Tab</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_sep"><td colspan="3"><div id="separator_B7gsAYwXbXlksep" class="sub_sep"></div></td></tr><tr class="sub_item" id="B7gsAYwXbXlkremove"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Delete dial</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="B7gsAYwXbXlkadd_to_speeddial"><td class="sub_item_icon"><img id="image_B7gsAYwXbXlkadd_to_speeddial" class="sub_icon" src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/images/icons/16x16.png"></td><td class="sub_item_text"><div class="sub_item_text">Add To SpeedDial</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="B7gsAYwXbXlkblock"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Block</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="B7gsAYwXbXlkcopy_url"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Copy URL</div></td><td class="sub_item_hk">&nbsp;</td></tr></tbody></table></div><div class="dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon " dir="ltr" id="polygon_i3Mgd3vRMUC2dhxWebMenuTopId" style="display: none;"><table class="dhtmlxMebu_SubLevelArea_Tbl" cellspacing="0" cellpadding="0" border="0"><tbody><tr class="sub_item" id="i3Mgd3vRMUC2open_tab"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Open in Tab</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="i3Mgd3vRMUC2open_new_tab"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Open in New Tab</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="i3Mgd3vRMUC2open_bg_tab"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Open in Background Tab</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="i3Mgd3vRMUC2open_incognito_tab"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Open in Incognito window</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_sep"><td colspan="3"><div id="separator_i3Mgd3vRMUC2sep" class="sub_sep"></div></td></tr><tr class="sub_item" id="i3Mgd3vRMUC2add_to_speeddial"><td class="sub_item_icon"><img id="image_i3Mgd3vRMUC2add_to_speeddial" class="sub_icon" src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/images/icons/16x16.png"></td><td class="sub_item_text"><div class="sub_item_text">Add To SpeedDial</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="i3Mgd3vRMUC2remove"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Delete dial</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="i3Mgd3vRMUC2block"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Block</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="i3Mgd3vRMUC2copy_url"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Copy URL</div></td><td class="sub_item_hk">&nbsp;</td></tr></tbody></table></div><div class="dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon " dir="ltr" id="polygon_1ueKq0gQftYJdhxWebMenuTopId" style="display: none;"><table class="dhtmlxMebu_SubLevelArea_Tbl" cellspacing="0" cellpadding="0" border="0"><tbody><tr class="sub_item" id="1ueKq0gQftYJopen"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Open</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="1ueKq0gQftYJremove"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Remove</div></td><td class="sub_item_hk">&nbsp;</td></tr></tbody></table></div><div class="dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon " dir="ltr" id="polygon_bngmTQ0B2iqwscroll_type" style="display: none;"><table class="dhtmlxMebu_SubLevelArea_Tbl" cellspacing="0" cellpadding="0" border="0"><tbody><tr class="sub_item" id="bngmTQ0B2iqwscroll_type_vertical"><td class="sub_item_icon"><div id="image_bngmTQ0B2iqwscroll_type_vertical" class="sub_icon rdbt_0"></div></td><td class="sub_item_text"><div class="sub_item_text">Vertical</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="bngmTQ0B2iqwscroll_type_horizontal"><td class="sub_item_icon"><div id="image_bngmTQ0B2iqwscroll_type_horizontal" class="sub_icon rdbt_0"></div></td><td class="sub_item_text"><div class="sub_item_text">Horizontal</div></td><td class="sub_item_hk">&nbsp;</td></tr></tbody></table></div><div class="dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon " dir="ltr" id="polygon_bngmTQ0B2iqwview" style="display: none;"><table class="dhtmlxMebu_SubLevelArea_Tbl" cellspacing="0" cellpadding="0" border="0"><tbody><tr class="sub_item" id="bngmTQ0B2iqwview_list"><td class="sub_item_icon"><div id="image_bngmTQ0B2iqwview_list" class="sub_icon rdbt_0"></div></td><td class="sub_item_text"><div class="sub_item_text">List</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="bngmTQ0B2iqwview_custom"><td class="sub_item_icon"><div id="image_bngmTQ0B2iqwview_custom" class="sub_icon rdbt_0"></div></td><td class="sub_item_text"><div class="sub_item_text">Preview ( 342x214 )</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="bngmTQ0B2iqwview_dial_size"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Change size...</div></td><td class="sub_item_hk">&nbsp;</td></tr></tbody></table></div><div class="dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon " dir="ltr" id="polygon_bngmTQ0B2iqwstyle" style="display: none;"><table class="dhtmlxMebu_SubLevelArea_Tbl" cellspacing="0" cellpadding="0" border="0"><tbody><tr class="sub_item" id="bngmTQ0B2iqwstyle_fancy"><td class="sub_item_icon"><div id="image_bngmTQ0B2iqwstyle_fancy" class="sub_icon rdbt_0"></div></td><td class="sub_item_text"><div class="sub_item_text">Fancy</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="bngmTQ0B2iqwstyle_standard"><td class="sub_item_icon"><div id="image_bngmTQ0B2iqwstyle_standard" class="sub_icon rdbt_0"></div></td><td class="sub_item_text"><div class="sub_item_text">Standard</div></td><td class="sub_item_hk">&nbsp;</td></tr></tbody></table></div><div class="dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon " dir="ltr" id="polygon_bngmTQ0B2iqwdhxWebMenuTopId" style="display: none;"><table class="dhtmlxMebu_SubLevelArea_Tbl" cellspacing="0" cellpadding="0" border="0"><tbody><tr class="sub_item" id="bngmTQ0B2iqwadd_dial"><td class="sub_item_icon"><img id="image_bngmTQ0B2iqwadd_dial" class="sub_icon" src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/images/newtab/contextmenu/plus.png"></td><td class="sub_item_text"><div class="sub_item_text">Add Dial</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_sep"><td colspan="3"><div id="separator_bngmTQ0B2iqwsep" class="sub_sep"></div></td></tr><tr class="sub_item" id="bngmTQ0B2iqwopen_all"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Open all Dials</div></td><td class="sub_item_hk">&nbsp;</td></tr><tr class="sub_item" id="bngmTQ0B2iqwstyle"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Style</div></td><td class="sub_item_hk"><div class="complex_arrow" id="arrow_bngmTQ0B2iqwstyle"></div></td></tr><tr class="sub_item" id="bngmTQ0B2iqwview"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">View</div></td><td class="sub_item_hk"><div class="complex_arrow" id="arrow_bngmTQ0B2iqwview"></div></td></tr><tr class="sub_item" id="bngmTQ0B2iqwscroll_type"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Scrolling type</div></td><td class="sub_item_hk"><div class="complex_arrow" id="arrow_bngmTQ0B2iqwscroll_type"></div></td></tr><tr class="sub_item" id="bngmTQ0B2iqwrefresh_all"><td class="sub_item_icon"></td><td class="sub_item_text"><div class="sub_item_text">Refresh All</div></td><td class="sub_item_hk">&nbsp;</td></tr></tbody></table></div>
+
+    <div id="test3d"></div>
+
+    <div id="center-screen-notification">
+      <div class="notification-message">
+
+      </div>
+    </div>
+
+    <div class="popupOptions" id="speedDialOptions" collapsed="1">
+      <div class="content">
+        <div>
+          <input type="checkbox" id="enableSpeedDial" value="1" class="setting" stype="bool" sname="sd.enable_top_sites" confirm="1">
+          <label for="enableSpeedDial">
+            <span>Enable Speed Dial</span>
+          </label>
+          <span for="enableSpeedDial" class="confirm">
+            <span>Sure?</span>
+            <span id="enableSpeedDial_yes" class="option">Yes</span> /
+            <span id="enableSpeedDial_no" class="option">no</span>
+          </span>
+        </div>
+        <div>
+          <input type="checkbox" id="defaultSpeedDial" value="1"> <label for="defaultSpeedDial"><span>Default</span></label>
+        </div>
+        <div>
+          <span>Max dials in popular group:</span> <input type="text" class="setting" id="maxGroupsSpeedDial" stype="int" sname="sd.all_groups_limit_dials" value="" max="50">
+        </div>
+        <div>
+          <fieldset>
+            <legend><span>Thumbnails</span></legend>
+            <!--
+            <div><input type="radio" name="thumbsSpeedDial" id="thumbsSpeedDialBig" value="big" class="setting" stype="string" sname="sd.thumbs_type"/> <label for="thumbsSpeedDialBig"><span msg="newtab_big"></span></label></div>
+            <div><input type="radio" name="thumbsSpeedDial" id="thumbsSpeedDialMedium" value="medium" class="setting" stype="string" sname="sd.thumbs_type"/> <label for="thumbsSpeedDialMedium"><span msg="newtab_medium"></span></label></div>
+            <div><input type="radio" name="thumbsSpeedDial" id="thumbsSpeedDialSmall" value="small" class="setting" stype="string" sname="sd.thumbs_type"/> <label for="thumbsSpeedDialSmall"><span msg="newtab_small"></span></label></div>-->
+            <div><input type="radio" name="thumbsSpeedDial" id="thumbsSpeedDialCustom" value="custom" class="setting" stype="string" sname="sd.thumbs_type"> <label for="thumbsSpeedDialCustom"><span>Preview</span></label></div>
+            <div><input type="radio" name="thumbsSpeedDial" id="thumbsSpeedDialList" value="list" class="setting" stype="string" sname="sd.thumbs_type"> <label for="thumbsSpeedDialList"><span>List</span></label></div>
+            <div>
+              <label for="speedDialColumns" id="speedDialColumnsTitle">Number of cols</label>
+              <select id="speedDialColumns" class="setting" stype="string" sname="sd.top_sites_columns">
+              <option value="auto">Auto</option>
+              <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>
+            </div>
+          </fieldset>
+        </div>
+        <div>
+          <fieldset class="centered">
+            <legend><span>Groups</span></legend>
+            <div><label for="defaultGroupSpeedDial"><span>Default group</span></label><select id="defaultGroupSpeedDial" class="setting" stype="string" sname="sd.default_group"><option value="-1">Last used group</option><option value="0">Popular</option><option value="1">Default</option></select></div>
+            <br>
+            <div><button id="sdButtonManageGroups" class="fvdButton"><span>Manage Groups</span></button></div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+    <div class="popupOptions" id="mostVisitedOptions" collapsed="1">
+      <div class="content">
+        <div>
+          <input type="checkbox" id="enableMostVisited" value="1" class="setting" stype="bool" confirm="1" sname="sd.enable_most_visited"> <label for="enableMostVisited"><span>Enable Most Visisted</span></label>
+
+          <span for="enableMostVisited" class="confirm">
+            <span>Sure?</span>
+            <span id="enableMostVisited_yes" class="option">Yes</span> /
+            <span id="enableMostVisited_no" class="option">no</span>
+          </span>
+        </div>
+        <div>
+          <input type="checkbox" id="defaultMostVisited" value="1"> <label for="defaultMostVisited"><span>Default</span></label>
+        </div>
+        <div>
+          <span>Show Last</span><input type="text" id="showLastMostVisited" value="" class="setting" stype="int" sname="sd.max_most_visited_records" max="75">
+        </div>
+        <div>
+          <fieldset>
+            <legend><span>Thumbnails</span></legend>
+            <!--
+            <div><input type="radio" name="thumbsMostVisited" id="thumbsMostVisitedBig" value="big" class="setting" stype="string" sname="sd.thumbs_type_most_visited"/> <label for="thumbsMostVisitedBig"><span msg="newtab_big"></span></label></div>
+            <div><input type="radio" name="thumbsMostVisited" id="thumbsMostVisitedMedium" value="medium" class="setting" stype="string" sname="sd.thumbs_type_most_visited"/> <label for="thumbsMostVisitedMedium"><span msg="newtab_medium"></span></label></div>
+            <div><input type="radio" name="thumbsMostVisited" id="thumbsMostVisitedSmall" value="small" class="setting" stype="string" sname="sd.thumbs_type_most_visited"/> <label for="thumbsMostVisitedSmall"><span msg="newtab_small"></span></label></div>-->
+            <div><input type="radio" name="thumbsMostVisited" id="thumbsMostVisitedCustom" value="custom" class="setting" stype="string" sname="sd.thumbs_type_most_visited"> <label for="thumbsMostVisitedCustom"><span>Preview</span></label></div>
+            <div><input type="radio" name="thumbsMostVisited" id="thumbsMostVisitedList" value="list" class="setting" stype="string" sname="sd.thumbs_type_most_visited"> <label for="thumbsMostVisitedList"><span>List</span></label></div>
+
+            <div>
+              <label for="mostVisitedColumns" id="mostVisitedColumnsTitle">Number of cols</label>
+              <select id="mostVisitedColumns" class="setting" stype="string" sname="sd.most_visited_columns">
+              <option value="auto">Auto</option>
+              <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>
+            </div>
+          </fieldset>
+        </div>
+        <div>
+          <fieldset>
+            <legend><span>Synchronization</span></legend>
+            <div align="center"><span>Cache life-time</span><select class="setting" stype="string" sname="sd.most_visited_cache_life_time" id="cacheLifeTimeMostVisited">
+              <option value="3600000">1</option>
+              <option value="7200000">2</option>
+              <option value="18000000">5</option>
+              <option value="36000000">10</option>
+            </select>&nbsp;<span>Hours</span>
+            </div>
+
+            <div id="doneflushMostVisitedCache" class="operationDone"><span>Done</span></div>
+
+            <div align="center"><button id="mostvisitedButtonSync" class="fvdButton">Update Stats</button></div>
+          </fieldset>
+        </div>
+        <div id="doneRestoreDeleted" class="operationDone"><span>Done</span></div>
+        <div class="restoreDeleted"><button id="mostvisitedButtonRestoreRemoved" class="fvdButton"><span>Restore Removed</span></button></div>
+
+      </div>
+    </div>
+
+    <div class="popupOptions" id="recentlyClosedOptions" collapsed="1">
+      <div class="content">
+        <div>
+          <input type="checkbox" id="enableRecentlyClosed" value="1" class="setting" confirm="1" stype="bool" sname="sd.enable_recently_closed"> <label for="enableRecentlyClosed"><span>Enable Recently Closed</span></label>
+
+          <span for="enableRecentlyClosed" class="confirm">
+            <span>Sure?</span>
+            <span id="enableRecentlyClosed_yes" class="option">Yes</span> /
+            <span id="enableRecentlyClosed_no" class="option">no</span>
+          </span>
+        </div>
+        <div>
+          <input type="checkbox" id="defaultRecentlyClosed" value="1"> <label for="defaultRecentlyClosed"><span>Default</span></label>
+        </div>
+        <div>
+          <span>Show Last</span><input type="text" id="showLastRecentlyClosed" value="" class="setting" stype="int" sname="sd.max_recently_closed_records" max="100">
+        </div>
+        <div>
+          <label for="recentlyClosedColumns" id="recentlyClosedColumnsTitle">Number of cols</label>
+          <select id="recentlyClosedColumns" class="setting" stype="string" sname="sd.recentlyclosed_columns">
+          <option value="auto">Auto</option>
+          <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="popupOptions" id="canTurnOfNewTabPopup" collapsed="1">
+      <div class="content">
+        <div><span>Note: You can disable FVD Speed Dial in a New Tab Page and launch only by pressing button.</span> (<a href="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/options.html#display-in-new-tab">Options &gt; Appearance</a>)</div>
+
+        <div class="center cbContainer">
+          <label><input id="sdCbCanTurnOffNewTabPopup" type="checkbox"><span>I've got it. Thanks.</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="popupOptions" id="offerAdjustBgToTheme" collapsed="1">
+      <div class="content">
+        <div><span>SpeedDial is available to apply current theme background</span></div>
+
+        <div id="themeBackgroundAdjustPreviewContainer">
+          <img id="themeBackgroundAdjustPreview" src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/newtab.html">
+          <div class="loading">
+            <div class="squaresLoading"></div>
+            <span>Background Downloading...</span>
+          </div>
+        </div>
+
+        <div class="center">
+          <button id="applyThemeBg" class="fvdButton green"><span>Apply theme background</span></button>
+          <button id="cancelThemeBg" class="fvdButton"><span>Cancel theme background</span></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- rate message -->
+    <div class="popupOptions" id="rateMessage" collapsed="1">
+      <div class="content">
+        <div class="click linkedText bold center">FVD Speed Dial</div>
+        <div class="click linkedText">Please write your review and give us a rating.</div>
+        <div class="click linkedText center">We appreciate your help</div>
+        <div class="click stars"></div>
+        <div class="migrateDontShowMessage"><label><span>Don't show it again.</span><input type="checkbox" id="sdCBDontDisplayMigrateMessage"></label></div>
+      </div>
+    </div>
+
+    <!-- themes message -->
+    <div class="popupOptions mainPopupMessage" id="themesInstallMessage" collapsed="1">
+      <div class="content">
+        <div class=" bold center">Wow. Themes available!</div>
+        <div class="center desc">Install themes for FVD Speed Dial</div>
+        <div class="center buttonContainer">
+          <a class="fvdButton green" target="_blank" href="http://fvdmedia.com/to/s/chrome_thm/">Get Themes!</a>
+        </div>
+        <div class="migrateDontShowMessage"><label><span>Don't show it again.</span><input type="checkbox" id="sdDontDisplayThemesMessage"></label></div>
+      </div>
+    </div>
+
+    <div id="speedDialTop">
+
+
+      <div id="searchBar">
+        <div class="activeContent" active="1">
+          <!--
+          <svg width="380" height="95" class="active-content-background">
+            <linearGradient id="active-content-fill" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stop-color="black" stop-opacity="1"/>
+              <stop offset="100%" stop-color="black" stop-opacity="0.8"/>
+            </linearGradient>
+            <path d="M2 2
+                     h 375 v 82 q 0 5 -5 5 h -25 q -5 0 -5 -5 v -12 q 0 -3 -3 -3 h -322 q -15 0 -15 -15 Z" fill="url(#active-content-fill)"
+               stroke="#e4e4e4" stroke-width="3"/>
+          </svg>
+          -->
+          <div class="dialIcons">
+            <div id="buttonSpeedDial" class="buttonBlock" expanded="1" active="1">
+              <div id="sdSetDisplayTypeSpeedDial" class="buttonBig speedDial rise"></div>
+              <div class="buttonBig speedDial fade"></div>
+              <div class="smallButtons">
+                <div id="speedDialExpand" class="buttonSmall expand" msg_target="title" title="Expand All"></div>
+                <div id="speedDialHide" class="buttonSmall unexpand" msg_target="title" title="Hide All"></div>
+
+                <div id="sdOpenFastOptions" class="buttonSmall options" msg_target="title" title="Options"></div>
+              </div>
+              <div class="subText">Speed Dial (5)</div>
+            </div>
+            <div id="buttonMostVisited" class="buttonBlock" expanded="1" active="0">
+              <div id="sdSetDisplayTypeMostVisited" class="buttonBig mostVisited rise"></div>
+              <div class="buttonBig mostVisited fade"></div>
+              <div class="smallButtons">
+                <div id="mostVisitedExpand" class="buttonSmall expand" msg_target="title" title="Expand All"></div>
+                <div id="mostVisitedHide" class="buttonSmall unexpand" msg_target="title" title="Hide All"></div>
+
+                <div id="mostVisitedOpenFastOptions" class="buttonSmall options" msg_target="title" title="Options"></div>
+              </div>
+              <div class="subText">Most Visited (508)</div>
+            </div>
+            <div id="buttonRecentlyClosed" class="buttonBlock" expanded="1" active="0">
+              <div class="buttonBig recentlyClosed fade"></div>
+              <div id="sdSetDisplayTypeRecentlyClosed" class="buttonBig recentlyClosed rise"></div>
+              <div class="smallButtons">
+                <div id="recentlyClosedExpand" class="buttonSmall expand" msg_target="title" title="Expand All"></div>
+                <div id="recentlyClosedHide" class="buttonSmall unexpand" msg_target="title" title="Hide All"></div>
+                <div id="recentlyClosedOpenFastOptions" class="buttonSmall options" msg_target="title" title="Options"></div>
+              </div>
+              <div class="subText">Recently Closed (43)</div>
+            </div>
+
+            <div msg_target="title" class="buttonBlock" id="buttonSync" active="0" title="Sync" hasupdates="0">
+              <div class="buttonBig sync fade"></div>
+              <div class="buttonBig sync rise"></div>
+            </div>
+
+            <div msg_target="title" class="buttonBlock" id="buttonSettings" active="0" title="Global options">
+              <div class="buttonBig settings fade"></div>
+              <div class="buttonBig settings rise"></div>
+            </div>
+          </div>
+
+          <div class="rightMenu">
+
+            <div class="powerOff" msg_target="title" title="PowerOff"></div>
+            <div class="showHide" msg_target="title" title="Show/Hide" active="1"></div>
+
+          </div>
+
+          <div class="menuBottom">
+            <div class="button" id="fastMenuToggleButton">
+              <span class="text active">
+              ›
+              </span>
+              <span class="text passive">
+              ‹
+              </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div id="cursorScrollTopHint" active="0">
+    </div>
+
+    <div id="speedDialWrapper" expanded="1" style="height: 1214px;">
+      <!-- light collapsed message appears if other messages in speedDialCollapsedContent is disabled -->
+      <div id="lightCollapsedMessage" style="display: none;">
+        <div class="round-close-button close-button"></div>
+        <span>Double click to show Speed Dial</span>
+      </div>
+
+      <div id="speedDialCollapsedContent">
+
+        <div class="collapsedMessagePoweroffDisabled collapsedMessageContainer">
+
+          <span>Double Click To Expand (or hit Ctrl + Enter)</span>
+
+          <div class="aboutPowerOff">
+            <span class="aboutPowerOffDesc">Learn how you can protect your Speed Dials from unwanted viewers</span>
+            ( <span class="aboutPowerOffFeature">PowerOff Feature</span> )
+          </div>
+
+          <div class="dontShowAgain">
+            <label><input id="cbNotDisplayCollapsedWithPowerOff" type="checkbox"><b>Don't show it again</b></label>
+          </div>
+
+        </div>
+
+        <div class="collapsedMessagePoweroffEnabled collapsedMessageContainer">
+
+          <span>Double Click To Expand (or hit Ctrl + Enter)</span>
+
+          <div class="dontShowAgain">
+            <label><input id="cbNotDisplayCollapsedWithoutPowerOff" type="checkbox"><b>Don't show it again</b></label>
+          </div>
+
+        </div>
+
+        <div class="collapsedMessagePoweroffForm collapsedMessageContainer">
+
+          <input type="password" id="poweroffPassCode">
+
+          <div>
+            <button id="enterPowerOffPassCode" class="fvdButton">Enter PassCode</button>
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <div id="speedDialGroupsWrapper" type="speeddial">
+
+        <div id="groupsWidthSetter">
+          <div id="groupsBoxContainer">
+            <div id="groupsBox"><div class="group" current="0" id="group_select_0"><span class="groupName">Popular (5)</span><span></span></div><div class="group" current="1" id="group_select_1"><span class="groupName">Default</span><span> (5)</span></div><div class="group add"><div class="image"></div></div></div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="dial-search-container" active="1">
+        <div class="dial-search-input-container">
+          <div class="dial-search-input" expanded="0">
+            <div class="dial-search-icon"></div>
+            <input type="text" id="dial-search-query" msg_target="placeholder" placeholder="Search in Speed Dial">
+            <div class="dial-search-reset-icon"></div>
+          </div>
+        </div>
+        <div class="dial-search-not-found">
+          <div class="dial-search-not-found-block">
+            <div class="dial-search-no-match-message">No Match</div>
+            <div>
+              <a href="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/newtab.html">Try on Web? Or press Enter key.</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="searchFormContainer" class="highlight">
+
+        <form style="display: block;" class="searchForm" id="cse-search-box" action="http://fvdsearch.com/">
+          <table>
+            <tbody><tr>
+              <td>
+                <div class="searchLogo"></div>
+              </td>
+              <td>
+                <div class="searchField">
+                  <div class="speechify-container"><input msg_target="placeholder" type="fvdTextBar" id="q" name="q" google="true" autocomplete="off" placeholder="Enter your search..."><div class="speechify-icon" title="Voice Search"></div></div>
+                  <input type="hidden" name="cx" id="cx">
+                  <input name="cof" value="FORID:10" type="hidden">
+                  <input name="ie" value="UTF-8" type="hidden">
+                <div class="acp_ltr" style="display:none" id="suggest_1"><table cellspacing="0"><tbody id="suggestions_1"></tbody><tfoot><tr><td></td></tr></tfoot></table></div></div>
+              </td>
+              <td>
+                <div class="search-button">
+                  <button>
+                    <span>Search</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody></table>
+        </form>
+
+      </div>
+
+
+      <div id="speedDialContent" enablemirrors="1" style="fancy">
+        <div id="listViewTypeSelector" hidden="true">
+          <label><input id="sdCbSetListViewTypeTitle" type="radio" name="listViewType" value="title"><span>Title</span></label>
+          <label><input id="sdCbSetListViewTypeUrl" type="radio" name="listViewType" value="url"><span>URL</span></label>
+        </div>
+
+        <!--DIALS GOES HERE-->
+
+        <div id="cellsContainer" class="dataContainer" style="perspective-origin: 50% 100px; width: 1790px; perspective: 360px; height: 688px;" rows="1"><div class="newtabCell" id="dialCell_2" data-url="https://www.youtube.com/" width="342" height="214" type="speeddial" row="0" col="0" skew="5" position="1" displaydialbg="true" title="YouTube
+https://www.youtube.com/" thumb-source-type="url" style="left: 0px; top: 0px; transform: rotateY(5deg); transform-origin: 150% 0% 0px; width: 362px;">
+
+      <div class="head">
+        <img src="chrome://favicon/https://www.youtube.com/">
+        <span>YouTube</span>
+      </div>
+      <div class="body" style="width: 352px; height: 224px;">
+        <!-- cell preview image is here -->
+        <div class="preview-image" style="background: url(&quot;filesystem:chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/persistent/sd_previews/iWZsxkcKxBTqmdGEtZutPqHeFKUXwhW1.png?1&quot;) center center / contain no-repeat;">
+          
+        </div>      
+        <div class="screenParent">
+          <div class="screen">
+            <div class="menuOverlay">
+              <div class="text">
+                  
+              Clicks: <span class="clicksCount">72</span></div>    
+              
+              <div class="speedDialIcons">
+                <div class="icon remove"></div>
+                <div class="icon edit"></div> 
+              </div>        
+            </div>      
+          </div>
+        </div>
+      </div>
+      <img src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/images/newtab/bottom_shadow.png" class="imgShadow">
+      <div class="footer">
+        <span>youtube.com</span>
+      </div>
+    
+    </div><div class="newtabCell" id="dialCell_1" data-url="http://facebook.com" width="342" height="214" type="speeddial" row="0" col="1" skew="2.5" position="2" displaydialbg="true" title="Facebook
+http://facebook.com" thumb-source-type="url" style="left: 362px; top: 0px; transform: rotateY(2.5deg); transform-origin: 100% 0% 0px; width: 362px;">
+
+      <div class="head">
+        <img src="chrome://favicon/http://facebook.com">
+        <span>Facebook</span>
+      </div>
+      <div class="body" style="width: 352px; height: 224px;">
+        <!-- cell preview image is here -->
+        <div class="preview-image" style="background: url(&quot;filesystem:chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/persistent/sd_previews/22ae9a07.png?1&quot;) center center / contain no-repeat;">
+          
+        </div>      
+        <div class="screenParent">
+          <div class="screen">
+            <div class="menuOverlay">
+              <div class="text">
+                  
+              Clicks: <span class="clicksCount">29</span></div>    
+              
+              <div class="speedDialIcons">
+                <div class="icon remove"></div>
+                <div class="icon edit"></div> 
+              </div>        
+            </div>      
+          </div>
+        </div>
+      </div>
+      <img src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/images/newtab/bottom_shadow.png" class="imgShadow">
+      <div class="footer">
+        <span>facebook.com</span>
+      </div>
+    
+    </div><div class="newtabCell" id="dialCell_3" data-url="https://www.reddit.com/" width="342" height="214" type="speeddial" row="0" col="2" position="3" displaydialbg="true" title="reddit: the front page of the internet
+https://www.reddit.com/" thumb-source-type="url" style="left: 724px; top: 0px; width: 362px;">
+
+      <div class="head">
+        <img src="chrome://favicon/https://www.reddit.com/">
+        <span>reddit: the front page of the internet</span>
+      </div>
+      <div class="body" style="width: 352px; height: 224px;">
+        <!-- cell preview image is here -->
+        <div class="preview-image" style="background: url(&quot;filesystem:chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/persistent/sd_previews/ynIE90zGHPPLxNZIXPa7JFd16vyIJDwz.png?1&quot;) center center / contain no-repeat;">
+          
+        </div>      
+        <div class="screenParent">
+          <div class="screen">
+            <div class="menuOverlay">
+              <div class="text">
+                  
+              Clicks: <span class="clicksCount">38</span></div>    
+              
+              <div class="speedDialIcons">
+                <div class="icon remove"></div>
+                <div class="icon edit"></div> 
+              </div>        
+            </div>      
+          </div>
+        </div>
+      </div>
+      <img src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/images/newtab/bottom_shadow.png" class="imgShadow">
+      <div class="footer">
+        <span>reddit.com</span>
+      </div>
+    
+    </div><div class="newtabCell" id="dialCell_4" data-url="http://www.amazon.com/" width="342" height="214" type="speeddial" row="0" col="3" skew="-2.5" position="4" displaydialbg="true" title="Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs &amp; more
+http://www.amazon.com/" thumb-source-type="url" style="left: 1086px; top: 0px; transform: rotateY(-2.5deg); transform-origin: 0% 0% 0px; width: 362px;">
+
+      <div class="head">
+        <img src="chrome://favicon/http://www.amazon.com/">
+        <span>Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs &amp; more</span>
+      </div>
+      <div class="body" style="width: 352px; height: 224px;">
+        <!-- cell preview image is here -->
+        <div class="preview-image" style="background: url(&quot;filesystem:chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/persistent/sd_previews/5gTQ8R5AdCzndbqB2tHMCZs1l7ZdE3de.png?1&quot;) center center / contain no-repeat;">
+          
+        </div>      
+        <div class="screenParent">
+          <div class="screen">
+            <div class="menuOverlay">
+              <div class="text">
+                  
+              Clicks: <span class="clicksCount">9</span></div>    
+              
+              <div class="speedDialIcons">
+                <div class="icon remove"></div>
+                <div class="icon edit"></div> 
+              </div>        
+            </div>      
+          </div>
+        </div>
+      <div class="on-dial-search-form"><input type="text" class="on-dial-search-input" style="height: 32px; font-size: 26px;"></div></div>
+      <img src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/images/newtab/bottom_shadow.png" class="imgShadow">
+      <div class="footer">
+        <span>amazon.com</span>
+      </div>
+    
+    </div><div class="newtabCell" id="dialCell_5" data-url="https://chrome.google.com/webstore" width="342" height="214" type="speeddial" row="0" col="4" skew="-5" position="5" displaydialbg="true" title="Chrome Web Store
+https://chrome.google.com/webstore" thumb-source-type="url" style="left: 1448px; top: 0px; transform: rotateY(-5deg); transform-origin: -50% 0% 0px; width: 362px;">
+
+      <div class="head">
+        <img src="chrome://favicon/https://chrome.google.com/webstore">
+        <span>Chrome Web Store</span>
+      </div>
+      <div class="body" style="width: 352px; height: 224px;">
+        <!-- cell preview image is here -->
+        <div class="preview-image" style="background: url(&quot;filesystem:chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/persistent/sd_previews/K1aDTHQsUqmONR64rxhIivn6sHU1nvct.png?1&quot;) center center / contain no-repeat;">
+          
+        </div>      
+        <div class="screenParent">
+          <div class="screen">
+            <div class="menuOverlay">
+              <div class="text">
+                  
+              Clicks: <span class="clicksCount">2</span></div>    
+              
+              <div class="speedDialIcons">
+                <div class="icon remove"></div>
+                <div class="icon edit"></div> 
+              </div>        
+            </div>      
+          </div>
+        </div>
+      </div>
+      <img src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/images/newtab/bottom_shadow.png" class="imgShadow">
+      <div class="footer">
+        <span>chrome.google.com/webstore</span>
+      </div>
+    
+    </div><div class="newtabCell" width="342" height="214" col="0" row="1" type="plus" skew="5" id="plus_cell_0" lastrow="1" style="left: 0px; top: 244px; width: 362px; transform: rotateY(5deg); transform-origin: 150% 0% 0px;">
+
+      <div class="head">
+        <img>
+        <span></span>
+      </div>
+      <div class="body" style="width: 352px; height: 224px;">
+        <!-- cell preview image is here -->
+        <div class="preview-image">
+          
+        </div>      
+        <div class="screenParent">
+          <div class="screen">
+            <div class="menuOverlay">
+              <div class="text">
+                  
+              </div>    
+              
+              <div class="speedDialIcons">
+                <div class="icon remove"></div>
+                <div class="icon edit"></div> 
+              </div>        
+            </div>      
+          </div>
+        </div>
+      </div>
+      <img src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/images/newtab/bottom_shadow.png" class="imgShadow">
+      <div class="footer">
+        <span>&nbsp;</span>
+      </div>
+    
+    </div><div class="newtabCell" width="342" height="214" col="1" row="1" type="plus" skew="2.5" id="plus_cell_1" lastrow="1" style="left: 362px; top: 244px; width: 362px; transform: rotateY(2.5deg); transform-origin: 100% 0% 0px;">
+
+      <div class="head">
+        <img>
+        <span></span>
+      </div>
+      <div class="body" style="width: 352px; height: 224px;">
+        <!-- cell preview image is here -->
+        <div class="preview-image">
+          
+        </div>      
+        <div class="screenParent">
+          <div class="screen">
+            <div class="menuOverlay">
+              <div class="text">
+                  
+              </div>    
+              
+              <div class="speedDialIcons">
+                <div class="icon remove"></div>
+                <div class="icon edit"></div> 
+              </div>        
+            </div>      
+          </div>
+        </div>
+      </div>
+      <img src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/images/newtab/bottom_shadow.png" class="imgShadow">
+      <div class="footer">
+        <span>&nbsp;</span>
+      </div>
+    
+    </div><div class="newtabCell" width="342" height="214" col="2" row="1" type="plus" id="plus_cell_2" lastrow="1" style="left: 724px; top: 244px; width: 362px;">
+
+      <div class="head">
+        <img>
+        <span></span>
+      </div>
+      <div class="body" style="width: 352px; height: 224px;">
+        <!-- cell preview image is here -->
+        <div class="preview-image">
+          
+        </div>      
+        <div class="screenParent">
+          <div class="screen">
+            <div class="menuOverlay">
+              <div class="text">
+                  
+              </div>    
+              
+              <div class="speedDialIcons">
+                <div class="icon remove"></div>
+                <div class="icon edit"></div> 
+              </div>        
+            </div>      
+          </div>
+        </div>
+      </div>
+      <img src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/images/newtab/bottom_shadow.png" class="imgShadow">
+      <div class="footer">
+        <span>&nbsp;</span>
+      </div>
+    
+    </div><div class="newtabCell" width="342" height="214" col="3" row="1" type="plus" skew="-2.5" id="plus_cell_3" lastrow="1" style="left: 1086px; top: 244px; width: 362px; transform: rotateY(-2.5deg); transform-origin: 0% 0% 0px;">
+
+      <div class="head">
+        <img>
+        <span></span>
+      </div>
+      <div class="body" style="width: 352px; height: 224px;">
+        <!-- cell preview image is here -->
+        <div class="preview-image">
+          
+        </div>      
+        <div class="screenParent">
+          <div class="screen">
+            <div class="menuOverlay">
+              <div class="text">
+                  
+              </div>    
+              
+              <div class="speedDialIcons">
+                <div class="icon remove"></div>
+                <div class="icon edit"></div> 
+              </div>        
+            </div>      
+          </div>
+        </div>
+      </div>
+      <img src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/images/newtab/bottom_shadow.png" class="imgShadow">
+      <div class="footer">
+        <span>&nbsp;</span>
+      </div>
+    
+    </div><div class="newtabCell" width="342" height="214" col="4" row="1" type="plus" skew="-5" id="plus_cell_4" lastrow="1" style="left: 1448px; top: 244px; width: 362px; transform: rotateY(-5deg); transform-origin: -50% 0% 0px;">
+
+      <div class="head">
+        <img>
+        <span></span>
+      </div>
+      <div class="body" style="width: 352px; height: 224px;">
+        <!-- cell preview image is here -->
+        <div class="preview-image">
+          
+        </div>      
+        <div class="screenParent">
+          <div class="screen">
+            <div class="menuOverlay">
+              <div class="text">
+                  
+              </div>    
+              
+              <div class="speedDialIcons">
+                <div class="icon remove"></div>
+                <div class="icon edit"></div> 
+              </div>        
+            </div>      
+          </div>
+        </div>
+      </div>
+      <img src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/images/newtab/bottom_shadow.png" class="imgShadow">
+      <div class="footer">
+        <span>&nbsp;</span>
+      </div>
+    
+    </div></div>
+
+        <div id="listContainerParent" hidden="true">
+
+          <div id="listNoItemsToDisplay" hidden="true" class="textOther">No Items To Display</div>
+
+          <div id="listContainer" class="dataContainer" hidden="true">
+          </div>
+
+          <div id="speeddialListViewMenu" class="listViewMenu" hidden="true">
+            <span id="sdListMenuAddDial" class="link">Add Dial</span>
+          </div>
+
+          <div id="mostvisitedListViewMenu" class="listViewMenu" hidden="true">
+            <span id="mostVisitedListMenuOpenAllLinks" class="link">Open All Links</span>
+            <span id="mostVisitedListMenuRemoveAllLinks" class="link delete">Delete All Links</span>
+          </div>
+
+          <div id="recentlyclosedListViewMenu" class="listViewMenu" hidden="true">
+            <span id="recentlyClosedListMenuOpenAllLinks" class="link">Open All Links</span>
+            <span id="recentlyClosedListMenuRemoveAllLinks" class="link delete">Delete All Links</span>
+          </div>
+
+        </div>
+
+        <div id="no3dmessage" hidden="true">
+          <div class="title">Oops, 3D Feature problem.</div>
+          <img src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/images/3dexample.png">
+
+          <div class="manual">
+            <div class="title">How to fix it:</div>
+
+            <ol>
+
+              <li>
+                <span>In order to enable 3D mode, you need to update your video card drivers</span>
+              </li>
+              <li>
+                <span>
+                  <span class="title">Restart</span>
+                  <span>your Browser and enjoy new Fancy 3D look.</span>
+                </span>
+              </li>
+              <li>
+                <span>If you see this message again, it means that browser doesn't support your video card to display FVD Speed Dial in 3D view.</span>
+              </li>
+
+              <!--
+              <li>
+                <span msg="newtab_3d_open_new_tab"></span>
+              </li>
+
+              <li>
+                <span>
+                  <div msg="newtab_3d_type_flags"></div>
+                  <div class="gray italic" msg="newtab_3d_without_quotes"></div>
+
+                  <img src="/images/3dfix/1.png"/>
+                </span>
+              </li>
+
+              <li>
+                <span>
+                  <div msg="newtab_3d_find_override"></div>
+
+                  <img src="/images/3dfix/2.png"/>
+
+                  <div class="gray" msg="newtab_3d_note_dont_afraid"></div>
+                </span>
+              </li>
+
+              <li>
+                <span>
+                  <span class="title" msg="newtab_3d_restart"></span>
+                  <span msg="newtab_3d_restart_continue"></span>
+                </span>
+              </li>
+
+              <li>
+                <span>
+                  <span msg="newtab_3d_if_not_works"></span>
+                </span>
+              </li>
+              -->
+            </ol>
+
+          </div>
+
+          <div class="buttonContainer">
+            <button id="no3dSwtichToStandard" class="fvdButton main">Click here to use Standard Mode</button>
+          </div>
+        </div>
+
+        <!--DIALS END-->
+
+
+      </div>
+
+    </div>
+
+    <div id="liveSearchContainer" display="0">
+
+      <div id="liveSearchWrapper">
+
+        <div id="liveSearch">
+          <div class="header">
+            <span></span>
+            <div class="close"></div>
+          </div>
+          <div class="content">
+            <iframe src="./f_files/saved_resource.html"></iframe>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <span style="display:none">
+      <span>Popuplar</span>
+    </span>
+
+    <div id="changeBackgroundBlock" class="textColorOther">Change Background</div>
+
+    <div class="movingPanel" id="appsPanel">
+
+      <button class="scrollButton top">
+         ›
+      </button>
+
+      <button class="scrollButton bottom">
+        ‹
+      </button>
+
+      <div class="preAppsContainer">
+
+        <div class="appsContainer">
+
+        </div>
+
+      </div>
+
+      <button id="appsPanelOpenButton" class="openButton" msg_target="title" title="Press &quot;Ctrl + Space&quot; to Hide/Unhide Apps panel.">
+        ›
+      </button>
+
+    </div>
+
+    <div class="movingPanel" id="widgetsPanel" locked="1" style="opacity: 1; bottom: -206px;" nowidgets="1">
+
+      <div class="preWidgetsContainer" style="overflow: hidden; position: relative; background-color: rgb(0, 0, 0);">
+
+        <div class="widgetsContainer" style="height: 210px; width: 0px;"></div>
+
+        <div class="widgetsNotFoundMessage">
+
+          <div class="test">Click + button to add some widgets!</div>
+          <img src="chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/images/newtab/widgets/curved_arrow.png">
+
+        </div>
+
+      </div>
+
+      <button msg_target="title" id="widgetsPanelOpenButton" class="openButton" title="Press &quot;Space&quot; to Hide/Unhide Widgets panel.">
+        <span></span>
+      </button>
+
+      <div class="actionButtons emboss">
+
+        <div class="add"></div>
+        <div class="lock" msg_target="title" locked="1" title="Move or Delete widgets"></div>
+        <div class="settings"></div>
+
+      </div>
+
+    <div class="controlScroll scrollType_horizontal scrollPosition_top" style="display: none;">
+      
+      <div class="scrollZone">
+        <div class="scrollThumb"></div>
+      </div>
+      
+    </div></div>
+
+    <div id="widgetPanelBgOverlay">
+
+      <div class="bg"></div>
+      <div class="bg2"></div>
+
+      <div class="content">
+
+        <!--
+        <div>
+          <div class="getMoreWidgets emboss"><a href="">Load More Widgets</a></div>
+        </div>
+        -->
+
+
+
+      </div>
+
+    </div>
+
+    <div id="introductionOverlay" class="bigInfoDialogOverlay">
+
+      <div id="initializationDialog">
+        <div class="init-dialog-content">Initialization... Please wait...</div>
+      </div>
+
+      <div id="introductionDialog" class="bigInfoDialog">
+
+        <div class="header">
+          <span>Welcome to FVD Speed Dial Quick Tour!</span>
+          <div class="close"></div>
+        </div>
+
+        <div class="body">
+
+          <div class="left">
+
+            <div class="slideTitle"></div>
+
+            <div class="slideText"></div>
+
+          </div>
+          <div class="right">
+            <div class="imageContainer"></div>
+            <div class="step-content" step="2">
+              <div class="step-content-title">Which phone do you use?</div>
+              <div class="mobile-stores-select">
+                <a class="app-store" value="appstore"></a>
+                <div>or</div>
+                <a class="android-store" value="playstore"></a>
+                <a class="other" value="other"></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="buttons">
+          <button class="fvdButton prev">Previous</button>
+          <button class="fvdButton next">Next</button>
+          <button class="fvdButton start green">Let's start!</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="searchOverlay" hidden="1">
+      <div id="searchOverlayForm">
+        <div class="logo-container">
+          <div class="searchOverlay-logo"></div>
+        </div>
+        <div class="searchField">
+          <input type="text" autocomplete="off" data-autocomplete-source="ebay">
+        <div class="acp_ltr" style="display:none" id="suggest_2"><table cellspacing="0"><tbody id="suggestions_2"></tbody><tfoot><tr><td></td></tr></tfoot></table></div></div>
+        <div class="search-button">
+          <button>
+            <span>Search</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="premiumforshareOverflay">
+      <div id="premiumforshareDialog">
+        <iframe src="./f_files/saved_resource(1).html"></iframe>
+      </div>
+    </div>
+
+    <div id="restoreCorruptedFilesOverlay" hidden="1">
+      <div class="restoreCorruptedFilesDialog">
+        <div class="restore-corrupted-icon"></div>
+        <div class="restore-corrupted-title">Speed dials being restored…</div>
+        <div class="restore-corrupted-msg">As a result of unidentified factors/actions of other programs some speed dials were damaged and are being restored at the moment. This may take some time.</div>
+        <div class="restore-corrupted-msg">No need to worry! Everything will be up and running in no time!</div>
+      </div>
+    </div>
+  
+
+</div><div class="parallax-bg-scene" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;"><div class="layer" data-depth="0.3" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: -69.81px; top: -36.51px; width: 2466.62px; height: 1290.02px; background-image: url(&quot;filesystem:chrome-extension://llaficoajjainaijghjlofdfmbjpebpa/persistent/misc/background.jpg?0.31980152601004463&quot;); background-size: cover;"></div></div></body></html>
