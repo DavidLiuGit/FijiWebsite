@@ -288,9 +288,6 @@ color: #fff;
 .main-section.alabaster{
 	background:#fafafa;
 }
-.connectUs p{
-	font-family: 'FontAwesome';
-}
 
 /* Featured Work
 ---------------------------------*/
@@ -453,6 +450,7 @@ img {
 	background-size:cover;
 	padding:55px 0;
 	text-align:center;
+	max-height: 550px;
 }
 .client-part-haead{
 	color:#fdfdfd;
