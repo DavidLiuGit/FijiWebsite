@@ -288,6 +288,9 @@ color: #fff;
 .main-section.alabaster{
 	background:#fafafa;
 }
+.connectUs p{
+	font-family: 'FontAwesome';
+}
 
 /* Featured Work
 ---------------------------------*/
