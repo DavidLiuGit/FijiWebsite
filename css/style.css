@@ -454,10 +454,10 @@ img {
 }
 .client-part-haead{
 	color:#fdfdfd;
-	font-size:28px;
+	font-size:24px;
 	line-height:41px;
 	margin:30px 0 10px;
-	font-family: ''Open Sans',sans-serif';
+	font-family: ''Roboto light',sans-serif';
 	font-style: italic;
 }
 .client{
