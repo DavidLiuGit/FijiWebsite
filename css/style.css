@@ -460,19 +460,19 @@ img {
 /* Clients
 ---------------------------------*/
 .client-part{
-	background:url(../img/banner2.jpg) center center no-repeat;
+	background:url(../img/badge-banner.jpg) center center no-repeat;
 	background-size:cover;
 	padding:55px 0;
 	text-align:center;
-	max-height: 550px;
+	max-height: 700px;
 }
 .client-part-haead{
 	color:#fdfdfd;
-	font-size:28px;
-	line-height:41px;
+	font-size:26px;
+	line-height:1.4;
 	margin:30px 0 10px;
 	font-family: ''Roboto light',sans-serif';
-	font-style: italic;
+	font-style:italic;
 }
 .client{
 	padding:0;
