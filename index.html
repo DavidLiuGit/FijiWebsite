@@ -513,16 +513,20 @@ $(document).ready(function(){
                     <li class="instagram"><a href="https://www.instagram.com/fiji_uoft/" class="fa-instagram"></a></li>
                 </ul>
             </div>
+            
+            <!-- Mail Form begin -->
         	<div class="col-lg-6 col-sm-5 wow fadeInUp delay-05s">
             	<div class="form">
-                	<form action="MAILTO:contact@fijitk.com" method="post" enctype="text/plain">
-                	<input class="input-text" type="text" name="" value="Your Name *" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
-                    <input class="input-text" type="text" name="" value="Your E-mail *" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
-                	<textarea class="input-text text-area" cols="0" rows="0" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
-                    <input class="input-btn" type="submit" value="send">
+                	<form action="mail.php" method="post" >
+                	<input class="input-text" type="text" name="_name" value="Your Name *" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
+                    <input class="input-text" type="text" name="email" value="Your E-mail *" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
+                	<textarea class="input-text text-area" cols="0" rows="0" name="message" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
+                    <input class="input-btn" type="submit" value="Submit" name="submit">
                     </form>
                 </div>	
             </div>
+            <!-- Mail Form end -->
+            
         </div>
 </section>
 </div>
