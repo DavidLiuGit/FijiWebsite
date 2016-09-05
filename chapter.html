@@ -15,6 +15,7 @@
 <link href="css/animate.css" rel="stylesheet" type="text/css">
 <link href="css/robotoLight.css" rel="stylesheet" type="text/css">
 
+<!-- javascript links -->
 <script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
@@ -30,7 +31,6 @@ $(document).ready(function(e) {
         $('.res-nav_click').click(function(){
             $('.main-nav').slideToggle();
             return false    
-            
         });
         
     });
@@ -85,7 +85,7 @@ $(document).ready(function(e) {
 
 
 <!-- main body begin -->
-<div class="page main-section" style="margin:25px auto; width:700px; max-width:80%;">
+<div class="page main-section wow fadeInDown delay-03" style="margin:25px auto; width:700px; max-width:80%;">
   <h2>Our Chapter</h2>
   <p> <h3>The Tau Kappa chapter of Phi Gamma Delta (FIJI) has been one of the best-regarded fraternities at the University of Toronto since 1923.</h3> 
   </p>
@@ -114,7 +114,7 @@ $(document).ready(function(e) {
 <!-- "Mission" section end -->
 
 
-<section class="main-section client-part" id="client"><!-- Quote section start -->
+<section class="main-section client-part animated" id="client"><!-- Quote section start -->
 	<div class="container">
 		<b class="quote-right wow fadeInDown delay-03"><i style="font-family:'FontAwesome' "class="fa-quote-right"></i></b>
     	<div class="row">
@@ -130,8 +130,8 @@ $(document).ready(function(e) {
 <section class="main-section alabaster"> <!-- Values section begin -->
 	<div class="container">
     	
-    	<div class="row" style="display:flex;justify-content:center;">
-			<figure class="col-lg-5 col-sm-4 wow fadeInLeft myFrame" style="align-items: center">
+    	<div class="row">
+			<figure class="col-lg-5 col-sm-4 animated wow fadeInLeft myFrame">
             	<img src="img/FijiShieldLogo.png" alt="shield">
         	</figure>
         	<div class="col-lg-7 col-sm-8 featured-work">
@@ -188,13 +188,43 @@ $(document).ready(function(e) {
 </section> <!-- Values section end -->
 
 
-<!-- Letters section begin -->
-<div class="page main-section" style="margin:25px auto; width:700px; max-width:80%;">
-  <h2>Our Greek Letters</h2>
-  <h3>Brothers of Phi Gamma Delta hold our Greek letters in reverence.</h3>
-</div>
-<!-- Letters section end -->
 
+<!--main-section-start-->
+<section class="main-section" id="chapter">	
+	<div class="container">
+    	<h2>Our Greek Letters</h2>
+    	<h3 style="text-align:center">Brothers of Phi Gamma Delta hold our Greek letters in reverence.</h3><br>
+        
+        <div class="row">
+        	<div class="col-lg-4 col-sm-6">
+              <p>Therefore, we limit the display of the letters to 7 places:</p>
+              
+              <div>
+                    <ol>
+                        <li>On a uniform diamond-shaped member badge</li>
+                        <li>On memorials to deceased brothers</li>
+                        <li>On the Fraternity's official flag</li>
+                        <li>On the Fraternity's official seal</li>
+                        <li>On a chapter house marker</li>
+                        <li>On a brother's official college ring</li>
+                        <li>On a brother's certificate of membership</li>
+                    </ol>
+              </div>
+                
+            </div>
+            
+            <figure style="vertical-align:central" class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
+            	<img style="border-radius:15px; box-shadow:2px 2px 1px #888888" src="img/pig-dinner-banner.jpg" alt="">
+            </figure>
+        
+        </div>
+	</div>
+    <br>
+    
+    <div align="center">
+    	<a class="link animated fadeInUp delay-12s" href="chapter.html" >Learn more</a>
+    </div>
+</section><!--main-section-end-->
 
 <footer class="footer">
     <div class="container">
