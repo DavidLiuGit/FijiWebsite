@@ -235,6 +235,7 @@ color: #fff;
 	margin:10px 0 0px;
 	padding:0;
 	list-style:none;
+	background:#CCC;
 }
 .main-nav li{
 	display:inline;
