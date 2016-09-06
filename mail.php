@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
-<title>Form submission</title>
+<title>Thank You</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -25,6 +26,35 @@ if(isset($_POST['submit'])){
     // You cannot use header and echo together. It's one or the other.
     }
 ?>
+
+
+<nav class="main-nav-outer" id="welcome"><!--main-nav-start-->
+	<div class="container">
+        <ul class="main-nav">
+        	<li><a href="index.html">Home</a></li>
+            <li><a href="chapter.html">Chapter</a></li>
+            <li><a href="index.html#events">Events</a></li>
+            <li class="small-logo"><a href="index.html"><img src="img/FijiShieldLogo.png" alt="" width="100" height="105"></a></li>
+            <li><a href="index.html#brothers">Brothers</a></li>
+            <li><a href="http://www.phigam.org">Fiji</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
+    </div>
+</nav>
+<!--main-nav-end-->
+
+<!-- begin thank you message -->
+<div class="page main-section" style="margin:25px auto; width:700px; max-width:80%;">
+  <h2 style="font-size:60px">Thank You</h2>
+  <p> 
+  	<h3 style="font-family:'Roboto light'; text-transform:none; text-align:center;">Your message has been sent. We will get back to you shortly.</h3> <br><br>
+    
+  	<div align="center">
+    	<a class="link animated fadeInUp delay-12s" href="index.html" >Return to Main Page</a>
+    </div>
+  </p>
+</div>
 
 </body>
 </html>
