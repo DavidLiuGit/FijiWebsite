@@ -47,7 +47,7 @@ if(isset($_POST['submit'])){
 <div class="page main-section" style="margin:25px auto; width:700px; max-width:80%;">
   <h2 style="font-size:60px">Thank You</h2>
   <p> 
-  	<h3 style="font-family:'Roboto light'; text-transform:none; text-align:center;">Your message has been sent. We will get back to you shortly.</h3> <br><br>
+  	<h3 style="font-family:'Roboto light'; text-transform:none; text-align:center;">Your RSVP is being confirmed! You will hear from us shortly.</h3> <br><br>
     
   	<div align="center">
     	<a class="link animated fadeInUp delay-12s" href="index.html" >Return to Main Page</a>
