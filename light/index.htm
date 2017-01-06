@@ -100,7 +100,7 @@ function changeBrightness(stripNumber, value) {
     var buyingAjax = new XMLHttpRequest();
     value = value / 100;
     console.log(value);
-    buyingAjax.open("GET", "http://192.168.0.18:3000/?stripNumber=" + stripNumber + "&brightness=" + value, true);
+    buyingAjax.open("GET", "http://192.168.0.14:3000/?stripNumber=" + stripNumber + "&brightness=" + value, true);
     buyingAjax.send();
 }
 });//]]> 
