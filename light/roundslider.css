@@ -106,7 +106,7 @@ div.rs-block {
 }
 .rs-overlay, .rs-overlay1, .rs-overlay2 {
 	position: absolute;
-	background-color: #fff;
+	background-color: #ffe;
 	z-index: 3;
 	top: 0;
 	height: 50%
