@@ -1,0 +1,9 @@
+# this script performs git stash, git pull, then copy contents into Nginx server
+echo "Stashing local changes"
+git stash
+echo "Performing Git pull"
+git pull
+#
+echo "Copying files"
+sudo cp -R -u * /var/www/html
+echo "Done!"

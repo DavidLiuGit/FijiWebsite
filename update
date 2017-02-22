@@ -1,0 +1,7 @@
+echo "Begin copying to Nginx."
+echo "This operation requires root access."
+#
+sudo cp -R -u * /var/www/html
+#
+echo "Done!"
+
