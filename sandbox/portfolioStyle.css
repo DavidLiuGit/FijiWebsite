@@ -43,19 +43,19 @@ a:hover {
 	text-align: center;
     padding-top:20px;
     padding-bottom: 20px;
-    padding-top: 20px;
+    padding-left: 20px;
 }
 .heroHeader {
-	height: 450px;
-	background-image: url("img/sandbox-banner.png");
-	background-size: cover;
-	background-position: center center;
-    background-color: #cccccc;
+	background:url(../img/pw_maze_black_2X.png) left top repeat;
+	background-color: #cccccc;
+	height:100vh;
+	max-height:100vh;
+	padding:0px 0 !important;
 }
 /* Navigation styles*/
 .topNavUl {
 	position: static;
-    padding-top:20px;
+    padding-top:40px;
     padding-bottom: 20px;
 }
 .topNavLI {
