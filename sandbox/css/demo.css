@@ -1,0 +1,12 @@
+.myContainer {
+	margin:25px 25px;
+}
+
+.myButton {
+	border:medium;
+	border-radius:3px;
+	border-color:#38CADC;
+	background-color:#FFFFFF;
+	padding:15px 35px;
+	color:#000000;
+}

@@ -31,6 +31,7 @@
     <script>var __adobewebfontsappname__="dreamweaver"</script>
     
     <script src="http://use.edgefonts.net/montserrat:n4:default;alice:n4:default.js" type="text/javascript"></script>
+    <script src="../js/smooth-scroll.js" type="text/javascript"></script>
 
 </head>
 
@@ -47,31 +48,31 @@ Container starts here
 <div class="gridContainer clearfix"> 
 
   <header class="fluid hero heroHeader"> 
-
-    <a href="#" title="Logo">
-
-    <figure class="fluid logo textStyle"><img src="img/sandbox.png" alt="sample logo"></figure>
-
-    </a>
-
-    <nav class="fluid topNav"> 
-
-      <!-- Customize your navigation links-->
-
-      <ul class="fluid fluidList topNavUl">
-
-        <li class="fluid topNavLI zeroMargin_desktop zeroMargin_tablet zeroMargin_mobile"><strong><a href="#" class="linkStyle" title="Nav Link">NAV 1</a></strong></li>
-        <li class="fluid topNavLI"><strong><a href="#" class="linkStyle" title="Nav Link">NAV 3</a></strong></li>
-        <li class="fluid topNavLI"><strong><a href="#" class="linkStyle" title="Nav Link">NAV 2</a></strong></li>
-      </ul>
-
-    </nav>
-
-    <h1 class="fluid mainHeading headingStyle">Welcome to the Sandbox</h1>
-
-	<!--<h6 class="fluid mainTagline textStyle">Everything in the sandbox in created by David Liu</h6>-->
-    <h6 class="fluid mainTagline textStyle ">Try resizing this window!</h6>
-
+	
+    <div>
+        <a href="#sectionOne" title="Logo">    
+        	<figure class="fluid logo textStyle"><img src="img/sandbox.png" alt="sample logo"></figure>    
+        </a>
+    
+        <nav class="fluid topNav"> 
+    
+          <!-- Customize your navigation links-->
+    
+          <ul class="fluid fluidList topNavUl">
+            <li class="fluid topNavLI zeroMargin_desktop zeroMargin_tablet zeroMargin_mobile"><strong><a href="#sectionOne" class="linkStyle" title="Nav Link">Explore</a></strong></li>
+            <li class="fluid topNavLI"><strong><a href="#" class="linkStyle" title="Nav Link">NAV 3</a></strong></li>
+            <li class="fluid topNavLI"><strong><a href="#" class="linkStyle" title="Nav Link">NAV 2</a></strong></li>
+          </ul>
+    
+        </nav>
+    
+        <h1 class="fluid mainHeading headingStyle">Welcome to the Sandbox</h1>
+    
+        <!--<h6 class="fluid mainTagline textStyle">Everything in the sandbox in created by David Liu</h6>-->
+        <h6 class="fluid mainTagline textStyle ">Try resizing this window!</h6>
+        
+        <a href="#sectionOne" class="link" style="margin:auto; float:left">Explore!</a>
+	</div>
   </header>
 
   <!-- banner section ends here--> 
@@ -86,11 +87,11 @@ Container starts here
 
   <article class="fluid textContainer">
 
-    <section id="sectionOne" class="fluid ">
+    <section id="sectionOne" class="fluid" style="width:80%;">
 
       <h2 class="sectionText">Explore this sandbox!</h2>
 
-      <p class="paraContent">Everything in this sandbox is made by David Liu. This is meant to serve as a place to practice coding web applications, and to test them before making them publicly accessible</p>
+      <p class="paraContent" style="width:80%; text-align:center">Everything in this sandbox is made by David Liu. This is meant to serve as a place to practice coding web applications, and to test them before making them publicly accessible</p>
 
     </section>
 	
@@ -118,40 +119,29 @@ Container starts here
 
     <h2 class="fluid showAreaH2 headingStyle">SHOW AREA</h2>
 
-    <figure class="fluid tiles zeroMargin_desktop zeroMargin_tablet"> <img src="placeholder.png" alt="placeholder"/>
-
-      <figcaption class="textStyle"></figcaption>
-
+    <figure class="fluid tiles zeroMargin_desktop zeroMargin_tablet"> 
+    	<a href="basics.html"> <img src="img/basics.jpg" alt="placeholder"/> </a>
+      	<figcaption class="textStyle"></figcaption>
     </figure>
 
     <figure class="fluid tiles"> <img src="placeholder.png" alt="placeholder"/>
-
       <figcaption class="textStyle"></figcaption>
-
     </figure>
 
     <figure class="fluid tiles  zeroMargin_tablet hide_mobile"> <img src="placeholder.png" alt="placeholder"/>
-
       <figcaption class="textStyle"></figcaption>
-
     </figure>
 
     <figure class="fluid tiles zeroMargin_desktop  hide_mobile"> <img src="placeholder.png" alt="placeholder"/>
-
       <figcaption class="textStyle"></figcaption>
-
     </figure>
 
     <figure class="fluid tiles zeroMargin_tablet hide_mobile"> <img src="placeholder.png" alt="placeholder"/>
-
       <figcaption class="textStyle"></figcaption>
-
     </figure>
 
     <figure class="fluid tiles hide_mobile"> <img src="placeholder.png" alt="placeholder"/>
-
       <figcaption class="textStyle"></figcaption>
-
     </figure>
 
   </article>
