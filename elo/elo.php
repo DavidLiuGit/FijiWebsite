@@ -12,7 +12,6 @@
 <style>		<!-- table style -->
 .eloTable{
 	border:none;
-	margin: 0px auto;
 	border-collapse: collapse;
 	max-width:95%;
 }
@@ -20,8 +19,11 @@
 	border: none;
     text-align: left;
     padding: 8px;
+	border-bottom: 1px #000000;
 }
 .eloTable td {
+	width:30%;
+	max-width:300px;
     border: none;
     text-align: left;
     padding: 8px;
@@ -61,7 +63,7 @@
 <div style="margin:40px auto; max-width:95%">
 
 <?php
-    echo "<table class='eloTable' >";
+    echo "<table class='eloTable' style='max-width:95%; margin 0 auto;'>";
     echo "<tr><th>Name</th><th>ELO</th><th>matches</th></tr>";
 
     class TableRows extends RecursiveIteratorIterator {
@@ -70,7 +72,7 @@
         }
 
         function current() {
-            return "<td style='width:150px;border:0;'>" . parent::current(). "</td>";
+            return "<td>" . parent::current(). "</td>";
         }
 
         function beginChildren() {
