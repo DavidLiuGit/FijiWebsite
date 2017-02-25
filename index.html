@@ -28,6 +28,9 @@
 <script type="text/javascript" src="js/wow.js"></script>
 <script type="text/javascript" src="js/classie.js"></script>
 
+<script src="js/angular.min.js"></script>
+<script src="js/angular-form.js"></script>
+
 
 <!-- smooth link-scrolling script-->
 <script>
@@ -61,23 +64,24 @@ $(document).ready(function(){
 </head>
 
 
-<body>
+<body ng-app="formValid">
 
 <div style="overflow:hidden;">
-<header class="header" id="header"><!--header-start-->
-	<div class="container" style="align-self:center">
-    	<figure class="logo animated fadeInDown delay-05s">
-        	<a href="#welcome"><img src="img/FijiShieldLogo.png" alt="" title="shield"></a>	
-        </figure>
-    	<h1 class="animated fadeInDown delay-1s">PHI GAMMA DELTA</h1>
-    	<ul class="we-create animated fadeInUp delay-17s">
-          <li>Tau Kappa</li><br><br>
-       	  <li>University of Toronto</li><br><br>
-        </ul>
-            <a class="link animated fadeInUp delay-22s" href="#welcome">Welcome</a>
-    </div>
+    <header class="header" id="header"><!--header-start-->
+        <div class="container" style="align-self:center">
+            <figure class="logo animated fadeInDown delay-05s">
+                <a href="#welcome"><img src="img/FijiShieldLogo.png" alt="" title="shield"></a>	
+            </figure>
+            <h1 class="animated fadeInDown delay-1s">PHI GAMMA DELTA</h1>
+            <ul class="we-create animated fadeInUp delay-17s">
+              <li>Tau Kappa</li><br><br>
+              <li>University of Toronto</li><br><br>
+            </ul>
+                <a class="link animated fadeInUp delay-22s" href="#welcome">Welcome</a>
+        </div>
+    
+    </header><!--header-end-->
 </div>
-</header><!--header-end-->
 
 
 <nav class="main-nav-outer" id="welcome"><!--main-nav-start-->
@@ -470,14 +474,39 @@ $(document).ready(function(){
             </div>
             
             <!-- Mail Form begin -->
-        	<div class="col-lg-6 col-sm-5 wow fadeInUp delay-05s">
-            	<div class="form">
-                	<form action="mail.php" method="post" >
-                	<input class="input-text" type="text" name="_name" value="Your Name *" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
-                    <input class="input-text" type="text" name="email" value="Your E-mail *" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
-                	<textarea class="input-text text-area" cols="0" rows="0" name="message" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
-                    <input class="input-btn" type="submit" value="Submit" name="submit">
+        	<div class="col-lg-6 col-sm-5 wow fadeInUp delay-05s" >
+            	<div class="form" novalidate>
+                	<form name="contactForm" action="mail.php" method="post" ng-controller="formController as formCtrl">
+                    
+                    	<!-- live preview code -->
+                        <blockquote ng-repeat="review in product.reviews">
+                            <b>Your Name: {{formCtrl.message.name}}</b>
+                            
+                            <cite>Your Email: {{formCtrl.message.email}}</cite>
+                            
+                            <p>Your message:<br>
+                            	{{formCtrl.message.body}}
+                            </p>
+                        </blockquote>
+                    
+                        <input class="input-text" type="text" name="_name" value="Your Name *" ng-model="formCtrl.message.name"
+                            onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" required/>
+                            
+                        <input 	class="input-text" type="email" name="email" value="Your E-mail *" ng-model="formCtrl.message.email"
+                            onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" required/>
+                            
+                        <textarea class="input-text text-area" cols="0" rows="0" name="message" ng-model="formCtrl.message.body"
+                            onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" required>Your Message *</textarea>
+                            
+                        <input ng-disabled="contactForm.$invalid" class="input-btn" type="submit" value="Submit" name="submit" />
+                        
+                        <br>
+                        <p style="color:#9A9A9A; padding-top:15px;">
+                        	Update: This form uses Angular, and PHP to send!	<br>
+                        	Contact form is valid: {{contactForm.$valid}} 
+                        </p>
                     </form>
+                    
                 </div>	
             </div>
             <!-- Mail Form end -->
