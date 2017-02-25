@@ -12,8 +12,9 @@
 <style>		<!-- table style -->
 .eloTable{
 	border:none;
-	margin: 0 auto;
+	margin: 0px auto;
 	border-collapse: collapse;
+	max-width:95%;
 }
 .eloTable th{
 	border: none;
@@ -26,7 +27,7 @@
     padding: 8px;
 }
 .eloTable tr:nth-child(even) {
-    background-color: #C8A3CC;
+    background-color: #E2C3E5;
 }
 </style>
 
