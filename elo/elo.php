@@ -10,16 +10,17 @@
 <script src="../js/angular.min.js"></script>	<!-- Angular -->
 
 <style>		<!-- table style -->
-.eloTable{
+.eloTable table{
 	border:none;
 	border-collapse: collapse;
 	max-width:95%;
 }
 .eloTable th{
 	border: none;
-    text-align: left;
-    padding: 8px;
-	border-bottom: 1px #000000;
+   text-align: left;
+   padding: 2px 8px;
+   margin-bottom: 3px;
+	border-bottom: 1px solid #000000 !important;
 }
 .eloTable td {
 	width:30%;
@@ -63,7 +64,7 @@
 <div style="margin:40px auto; max-width:95%">
 
 <?php
-    echo "<table class='eloTable' style='max-width:95%; margin 0 auto;'>";
+    echo "<table class='eloTable' style='max-width:95%; margin: 0 auto;'>";
     echo "<tr><th>Name</th><th>ELO</th><th>matches</th></tr>";
 
     class TableRows extends RecursiveIteratorIterator {
