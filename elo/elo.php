@@ -40,7 +40,7 @@
 
 <?php
     echo "<table style='border: solid 1px black; margin:0 auto'>";
-    echo "<tr><th>Id</th><th>Name</th><th>ELO</th><th>matches</th><th>nickname</th></tr>";
+    echo "<tr><th>Name</th><th>ELO</th><th>matches</th></tr>";
 
     class TableRows extends RecursiveIteratorIterator {
         function __construct($it) {
@@ -79,7 +79,7 @@
 	try{
 		// select - prepare a select statement
 		//echo "Preparing query<br>";
-		$stmt = $conn->prepare("SELECT * FROM tournament"); // fetch all entries from tournament table
+		$stmt = $conn->prepare("SELECT name, elo, matches FROM tournament"); // fetch from tournament table
 		//echo "Query prepared<br>";
 		$stmt->execute();
 		//echo "Executing query...<br>";
