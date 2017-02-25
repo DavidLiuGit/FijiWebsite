@@ -6,8 +6,7 @@
 		this.message = {};								// init to blank message
 		this.message.name = "Your Name *";
 		this.message.email = "Your E-mail *";
-		this.message.body = "Your Message *";
+		//this.message.body = "Your Message *";
 	});
-	
 	
 })();

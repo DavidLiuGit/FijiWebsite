@@ -220,7 +220,7 @@
         // scroll position.
         function setLeft(x) {
             // Only if the scroll is not what it was last time we did this.
-            if (x != lastOffsetLeft) {
+            if (x !== lastOffsetLeft) {
                 // Move the target element horizontally relative to its original
                 // horizontal position.
                 target.css('left', offsetLeft - x);
@@ -232,7 +232,7 @@
 
         function getMarginTop() {
             var marginTop = base.options.marginTop;
-            if (!marginTop) return 0;
+            if (!marginTop) { return 0; }
 
             if (typeof(marginTop) === 'function') {
                 return marginTop.apply(target);
@@ -243,7 +243,7 @@
         // Checks to see if we need to do something based on new scroll position
         // of the page.
         function checkScroll() {
-            if (!$.isScrollToFixed(target)) return;
+            if (!$.isScrollToFixed(target)) { return; }
             var wasReset = isReset;
 
             // If resetScroll has not yet been called, call it. This only
@@ -287,7 +287,7 @@
                     setUnfixed();
                     target.trigger('unfixed.ScrollToFixed');
                 }
-            } else if (base.options.bottom == -1) {
+            } else if (base.options.bottom === -1) {
                 // If the vertical scroll position, plus the optional margin, would
                 // put the target element at the specified limit, set the target
                 // element to absolute.

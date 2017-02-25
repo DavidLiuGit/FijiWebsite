@@ -479,13 +479,13 @@ $(document).ready(function(){
                 	<form name="contactForm" action="mail.php" method="post" ng-controller="formController as formCtrl">
                     
                     	<!-- live preview code -->
-                        <blockquote ng-repeat="review in product.reviews">
-                            <b>Your Name: {{formCtrl.message.name}}</b>
+                        <blockquote>
+                            <b>Your Name:</b> {{formCtrl.message.name}}<br>
                             
-                            <cite>Your Email: {{formCtrl.message.email}}</cite>
+                            <cite><b>Your Email:</b> {{formCtrl.message.email}}</cite>
                             
-                            <p>Your message:<br>
-                            	{{formCtrl.message.body}}
+                            <p style="padding-left:0; margin-left:0; padding-top:0; margin-top:0"><b>Your message:</b><br>
+                            	<p style="padding-left:5px;  max-width:400px"> {{formCtrl.message.body}} </p>
                             </p>
                         </blockquote>
                     
@@ -495,15 +495,14 @@ $(document).ready(function(){
                         <input 	class="input-text" type="email" name="email" value="Your E-mail *" ng-model="formCtrl.message.email"
                             onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" required/>
                             
-                        <textarea class="input-text text-area" cols="0" rows="0" name="message" ng-model="formCtrl.message.body"
+                        <textarea ng-model="formCtrl.message.body" class="input-text text-area" cols="0" rows="0" name="message" 
                             onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" required>Your Message *</textarea>
                             
                         <input ng-disabled="contactForm.$invalid" class="input-btn" type="submit" value="Submit" name="submit" />
                         
                         <br>
                         <p style="color:#9A9A9A; padding-top:15px;">
-                        	Update: This form uses Angular, and PHP to send!	<br>
-                        	Contact form is valid: {{contactForm.$valid}} 
+                        	Update: This form now uses Angular, and PHP to send!	
                         </p>
                     </form>
                     
