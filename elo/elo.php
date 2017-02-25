@@ -52,6 +52,21 @@
     catch(PDOException $e){
         echo "Connection failed: " . $e->getMessage();
     }
+	
+	try{
+		// select - prepare a select statement
+		$stmt = $conn->prepare("SELECT * FROM tournament"); // fetch all entries from tournament table
+		$stmt->execute();
+		echo "Executing query: " . $stmt;
+		$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);    // set the resulting array to associative
+		foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+			echo $v;
+		}
+	} catch (PDOException $e){
+        echo "Error while executing query: " . $stmt . "<br>" . $e->getMessage();
+    }
+	
+	$conn = null;				// close the connection	
 ?>
 
 </body>
