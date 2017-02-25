@@ -37,10 +37,21 @@
 </div>
 
 <?php
-    $servername = "192.168.0.20";       // or the server/domain name
+    $servername = "127.0.0.1";       // or the server/domain name
     $username = "public";               // provide username
     $password = "123456";             	// provide password
 
+	// create connection
+    try {
+        $conn = new PDO ("mysql:host=$servername;dbname=tournamentDB", $username, $password);
+
+        // set PDO error mode to exception
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "Connected successfully";
+    }
+    catch(PDOException $e){
+        echo "Connection failed: " . $e->getMessage();
+    }
 ?>
 
 </body>
