@@ -9,6 +9,27 @@
 
 <script src="../js/angular.min.js"></script>	<!-- Angular -->
 
+<style>		<!-- table style -->
+.eloTable{
+	border:none;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+.eloTable th{
+	border: none;
+    text-align: left;
+    padding: 8px;
+}
+.eloTable td {
+    border: none;
+    text-align: left;
+    padding: 8px;
+}
+.eloTable tr:nth-child(even) {
+    background-color: #C8A3CC;
+}
+</style>
+
 </head>
 
 <body>
@@ -39,7 +60,7 @@
 <div style="margin:40px auto; max-width:95%">
 
 <?php
-    echo "<table style='border: solid 1px black; margin:0 auto'>";
+    echo "<table class='eloTable' >";
     echo "<tr><th>Name</th><th>ELO</th><th>matches</th></tr>";
 
     class TableRows extends RecursiveIteratorIterator {
@@ -48,7 +69,7 @@
         }
 
         function current() {
-            return "<td style='width:150px;border:1px solid black;'>" . parent::current(). "</td>";
+            return "<td style='width:150px;border:0;'>" . parent::current(). "</td>";
         }
 
         function beginChildren() {
@@ -59,7 +80,7 @@
             echo "</tr>" . "\n";
     }
     }
-    $servername = "127.0.0.1";       // or the server/domain name
+    $servername = "127.0.0.1";       	// or the server/domain name
     $username = "public";               // provide username
     $password = "123456";             	// provide password
     $myDB = "tournamentDB";
