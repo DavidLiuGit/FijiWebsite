@@ -63,6 +63,9 @@
 
 <div style="margin:40px auto; max-width:95%">
 
+<h1 style="text-align:center; padding-bottom:20px">Current Rankings</h1>
+
+
 <?php
     echo "<table class='eloTable' style='max-width:95%; margin: 0 auto;'>";
     echo "<tr><th>Name</th><th>ELO</th><th>matches</th></tr>";
@@ -104,7 +107,7 @@
 	try{
 		// select - prepare a select statement
 		//echo "Preparing query<br>";
-		$stmt = $conn->prepare("SELECT name, elo, matches FROM tournament"); // fetch from tournament table
+		$stmt = $conn->prepare("SELECT name, elo, matches FROM tournament ORDER BY elo"); // fetch from tournament table
 		//echo "Query prepared<br>";
 		$stmt->execute();
 		//echo "Executing query...<br>";
