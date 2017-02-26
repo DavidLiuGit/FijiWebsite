@@ -76,20 +76,19 @@
     <h3 style="text-align:center; color:#4F4F4F">For all your ranking needs</h3>
 </div>
 
+<script src="eloNG.js"></script>			<!-- elo AngularJS script -->
 
 <!-- NEW MATCH FORM -->
 <div style="margin: 0 auto;"  ng-controller="formController as formCtrl">
 	<form name="match" class="matchForm">
 
         <!-- drop-down list, for selecting player 1; -->
-		<select name="singleSelect1" id="singleSelect" ng-model="formCtrl.selA1" 
-        	class="selectpicker show-tick" data-live-search="true">			<!-- ng-model binds selected data to specified var -->
+		<select id="singleSelect" ng-model="formCtrl.selA1" class="selectpicker show-tick" data-live-search="true">			<!-- ng-model binds selected data to specified var -->
     		<option ng-repeat="p in persons" value="{{p.id}}">{{p.name}}</option>
 		</select>
 		<br>
         <!-- drop-down list, for selecting player 1; -->
-		<select name="singleSelect2" id="singleSelect" ng-model="formCtrl.selB1"
-        	class="selectpicker show-tick" data-live-search="true" >		<!-- ng-model binds selected data to specified var -->
+		<select id="singleSelect" ng-model="formCtrl.selB1" class="selectpicker show-tick" data-live-search="true">		<!-- ng-model binds selected data to specified var -->
     		<option ng-repeat="p in persons" value="{{p.id}}">{{p.name}}</option>
 		</select>
 	</form>
@@ -107,7 +106,7 @@
 </div>
 
 
-<script src="eloNG.js"></script>			<!-- elo AngularJS script -->
+
 
 
 <div style="margin:40px auto; max-width:95%">
