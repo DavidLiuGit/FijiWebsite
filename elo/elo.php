@@ -32,6 +32,7 @@
 	}
 	.eloTable tr:nth-child(even) {
 		background-color: #E2C3E5;
+		border: 1px solid #E2C3E5;
 	}
 	.matchForm form{
 		max-width:95%;
@@ -85,10 +86,6 @@
 		</select>
 	</form>
 
-    <p ng-repeat="p in persons">
-    	Name: {{p.name}}  ELO: {{p.elo}}  matches: {{p.matches}}
-        
-    </p>
     
     <table class='eloTable' style='max-width:95%; margin: 0 auto;'>
     	<tr><th>Name</th><th>ELO</th><th>matches</th></tr>								<!-- table header -->
@@ -104,7 +101,7 @@
 
     <h1 style="text-align:center; padding-bottom:20px">Current Rankings</h1>
 
-    <!-- fetched with PHP-PDO<->MySQL -->
+    <!-- fetched with PHP-PDO<->MySQL 
     <?php
         echo "<table class='eloTable' style='max-width:95%; margin: 0 auto;'>";
         echo "<tr><th>Name</th><th>ELO</th><th>matches</th></tr>";
@@ -163,7 +160,7 @@
         $conn = null;				// close the connection
         echo "</table>";
     ?>
-
+	-->
 </div>
 
 </body>
