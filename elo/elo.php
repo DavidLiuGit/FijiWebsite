@@ -14,7 +14,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="../js/bootstrap-select.js"></script>
 <script src="../js/angular.min.js"></script>	<!-- Angular -->
-				
+
 
 <style>		<!-- table style -->
 	.eloTable table{
@@ -83,21 +83,21 @@
 	<form name="match" class="matchForm">
 
         <!-- drop-down list, for selecting player 1; -->
-		<select id="singleSelect" ng-model="formCtrl.selA1" class="selectpicker show-tick" 
+		<select id="singleSelect" ng-model="selA1" class="selectpicker show-tick"
         	data-live-search="true" title="Select Player 1...">			<!-- ng-model binds selected data to specified var -->
     		<option ng-repeat="p in persons" value="{{p.id}}">{{p.name}}</option>
 		</select>
 		<br>
-        
+
         <!-- drop-down list, for selecting player 2; -->
-		<select id="singleSelect" ng-model="formCtrl.selB1" class="selectpicker show-tick" 
+		<select id="singleSelect" ng-model="selB1" class="selectpicker show-tick"
         	data-live-search="true" title="Select Player 2...">		<!-- ng-model binds selected data to specified var -->
     		<option ng-repeat="p in persons" value="{{p.id}}">{{p.name}}</option>
 		</select>
         <br>
-        
+
         <button ng-disabled="!selA1 || !selB1" ng-click="newMatch()" class="btn btn-default">Submit Match</button>
-        
+
 	</form>
 
 
@@ -118,9 +118,9 @@
 
 <div style="margin:40px auto; max-width:95%">
 
-    
 
-    <!-- fetched with PHP-PDO<->MySQL 
+
+    <!-- fetched with PHP-PDO<->MySQL
     <?php
         echo "<table class='eloTable' style='max-width:95%; margin: 0 auto;'>";
         echo "<tr><th>Name</th><th>ELO</th><th>matches</th></tr>";
