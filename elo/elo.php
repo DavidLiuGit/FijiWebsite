@@ -107,7 +107,7 @@
 	try{
 		// select - prepare a select statement
 		//echo "Preparing query<br>";
-		$stmt = $conn->prepare("SELECT name, elo, matches FROM tournament ORDER BY elo"); // fetch from tournament table
+		$stmt = $conn->prepare("SELECT name, elo, matches FROM tournament ORDER BY elo,id"); // fetch from tournament table
 		//echo "Query prepared<br>";
 		$stmt->execute();
 		//echo "Executing query...<br>";
