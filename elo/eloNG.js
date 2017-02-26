@@ -6,6 +6,11 @@
 	    $http.get("fetchAllPublic.php").then( function (response) {
 	        $scope.persons = response.data.records;
         });
+		
+		records = $scope.persons;
+		
+		sel1 = null;
+		sel2 = null;
     });
 
 })();

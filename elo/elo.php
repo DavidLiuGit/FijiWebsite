@@ -45,6 +45,7 @@
 
 </head>
 <body ng-app="eloModule">
+
 <nav class="main-nav-outer" id="test"><!--main-nav-start-->
 	<div class="container">
         <ul class="main-nav">
@@ -71,10 +72,20 @@
 
 <!-- NEW MATCH FORM -->
 <div style="margin: 0 auto;"  ng-controller="formController as formCtrl">
-	<form class="matchForm">
-
+	<form name="match" class="matchForm">
+    	
+        <!-- drop-down list, for selecting player 1; -->
+		<select name="singleSelect1" id="singleSelect" ng-model="sel1" >		<!-- ng-model binds selected data to specified var -->
+    		<option ng-repeat="p in records" value="{{p.id}}">{{p.name}}</option> 
+		</select>
+        
+        <!-- drop-down list, for selecting player 1; -->
+		<select name="singleSelect2" id="singleSelect" ng-model="sel2" >		<!-- ng-model binds selected data to specified var -->
+    		<option ng-repeat="p in records" value="{{p.id}}">{{p.name}}</option> 
+		</select>
 	</form>
     
+    {{persons[1].name}}<br>
     <p ng-repeat="p in persons"> 
     	Name: {{p.name}}  ELO: {{p.elo}}  matches: {{p.matches}}
     </p>
