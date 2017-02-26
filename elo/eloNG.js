@@ -1,11 +1,11 @@
-// Angular for ELO.php
+//Angular for ELO.php
 ( function() {
-	var app = angular.module ( 'eloModule', [ ] );		// create module - eloModule
-	
-	app.controller ( 'formController', function(){
-		
-	});
-	
-	
-	
+    var app = angular.module ( 'eloModule', [ ] );		// create module - eloModule
+
+    app.controller ( 'formController', function($scope, $http){
+	    $http.get("fetchAllPublic.php").then( function (response) {
+	        $scope.persons = response.data.records;
+        });
+    });
+
 })();

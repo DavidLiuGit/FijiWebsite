@@ -2,92 +2,13 @@
 <html>
 <head>
 <meta charset="utf-8">
-
-<title>ELO</title>
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
-<script src="../js/angular.min.js"></script>	<!-- Angular -->
-				<!-- elo AngularJS script -->
-
-<style>		<!-- table style -->
-	.eloTable table{
-		border:none;
-		border-collapse: collapse;
-		max-width:95%;
-	}
-	.eloTable th{
-		border: none;
-	    text-align: left;
-	    padding: 2px 8px;
-	    margin-bottom: 3px;
-		border-bottom: 1px solid #000000 !important;
-	}
-	.eloTable td {
-		width:30%;
-		max-width:300px;
-		border: none;
-		text-align: left;
-		padding: 8px;
-	}
-	.eloTable tr:nth-child(even) {
-		background-color: #E2C3E5;
-	}
-	.matchForm form{
-		max-width:95%;
-		margin: 20px auto;
-		border: 1px solid #993399;
-		border-radius: 25px;
-		padding: 20px 20px;
-	}
-
-</style>
-
+<title>FetchAllPublic</title>
 </head>
-<body ng-app="eloModule">
-<nav class="main-nav-outer" id="test"><!--main-nav-start-->
-	<div class="container">
-        <ul class="main-nav">
-        	<li><a href="../index.html">Home</a></li>
-            <li><a href="#service">Chapter</a></li>
-            <li><a href="#Portfolio">Events</a></li>
-            <li class="small-logo"><a href="#header"><img src="../img/FijiShieldLogo.png" alt="" width="100" height="105"></a></li>
-            <li><a href="#client">Grads</a></li>
-            <li><a href="#team">Fiji</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
-    </div>
-</nav>
-<!--main-nav-end-->
 
-<!-- main body begin -->
-<!-- heading -->
-<div style="margin:25px auto">
-	<h1 style="text-align:center"> Welcome to the Fiji ELO System!</h1>
-    <h3 style="text-align:center; color:#4F4F4F">For all your ranking needs</h3>
-</div>
+<body>
 
-
-<!-- NEW MATCH FORM -->
-<div style="margin: 0 auto;"  ng-controller="formController as formCtrl">
-	<form class="matchForm">
-
-	</form>
-    
-    <p ng-repeat="p in persons"> 
-    	Name: {{p.name}}  ELO: {{p.elo}}  matches: {{p.matches}}
-    </p>
-</div>
-
-<script src="eloNG.js"></script>	
-
-<div style="margin:40px auto; max-width:95%">
-
-    <h1 style="text-align:center; padding-bottom:20px">Current Rankings</h1>
-    
-    <!-- fetched with PHP-PDO<->MySQL -->
-    <?php
+	<!--
+	<?php
         echo "<table class='eloTable' style='max-width:95%; margin: 0 auto;'>";
         echo "<tr><th>Name</th><th>ELO</th><th>matches</th></tr>";
     
@@ -145,8 +66,6 @@
         $conn = null;				// close the connection
         echo "</table>";
     ?>
-
-</div>
-
+-->
 </body>
 </html>
