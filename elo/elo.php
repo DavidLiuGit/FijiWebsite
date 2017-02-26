@@ -83,12 +83,14 @@
 	<form name="match" class="matchForm">
 
         <!-- drop-down list, for selecting player 1; -->
-		<select id="singleSelect" ng-model="formCtrl.selA1" class="selectpicker show-tick" data-live-search="true">			<!-- ng-model binds selected data to specified var -->
+		<select id="singleSelect" ng-model="formCtrl.selA1" class="selectpicker show-tick" 
+        	data-live-search="true" title="Select Player 1..." data-tokens="{{p.name + p.nickname}}">			<!-- ng-model binds selected data to specified var -->
     		<option ng-repeat="p in persons" value="{{p.id}}">{{p.name}}</option>
 		</select>
 		<br>
         <!-- drop-down list, for selecting player 1; -->
-		<select id="singleSelect" ng-model="formCtrl.selB1" class="selectpicker show-tick" data-live-search="true">		<!-- ng-model binds selected data to specified var -->
+		<select id="singleSelect" ng-model="formCtrl.selB1" class="selectpicker show-tick" 
+        	data-live-search="true" title="Select Player 1...">		<!-- ng-model binds selected data to specified var -->
     		<option ng-repeat="p in persons" value="{{p.id}}">{{p.name}}</option>
 		</select>
 	</form>
