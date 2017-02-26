@@ -6,11 +6,14 @@
 <title>ELO</title>
 
 <link href="../css/style.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="../css/bootstrap-select.min.css">	<!-- Bootstrap select CSS -->
 
-<script src="../js/jquery.1.8.3.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="dist/css/bootstrap-select.css">		<!-- Bootstrap select CSS -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="dist/js/bootstrap-select.js"></script>
 <script src="../js/angular.min.js"></script>	<!-- Angular -->
-<script src="../js/bootstrap-select.js"></script>
 				
 
 <style>		<!-- table style -->
@@ -80,7 +83,7 @@
 
         <!-- drop-down list, for selecting player 1; -->
 		<select name="singleSelect1" id="singleSelect" ng-model="formCtrl.selA1" 
-        	class="selectpicker" data-live-search="true">		<!-- ng-model binds selected data to specified var -->
+        	class="selectpicker show-tick" data-live-search="true">		<!-- ng-model binds selected data to specified var -->
     		<option ng-repeat="p in persons" value="{{p.id}}">{{p.name}}</option>
 		</select>
 		<br>
