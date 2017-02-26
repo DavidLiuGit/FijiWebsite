@@ -11,28 +11,36 @@
 				<!-- elo AngularJS script -->
 
 <style>		<!-- table style -->
-.eloTable table{
-	border:none;
-	border-collapse: collapse;
-	max-width:95%;
-}
-.eloTable th{
-	border: none;
-   text-align: left;
-   padding: 2px 8px;
-   margin-bottom: 3px;
-	border-bottom: 1px solid #000000 !important;
-}
-.eloTable td {
-	width:30%;
-	max-width:300px;
-    border: none;
-    text-align: left;
-    padding: 8px;
-}
-.eloTable tr:nth-child(even) {
-    background-color: #E2C3E5;
-}
+	.eloTable table{
+		border:none;
+		border-collapse: collapse;
+		max-width:95%;
+	}
+	.eloTable th{
+		border: none;
+	    text-align: left;
+	    padding: 2px 8px;
+	    margin-bottom: 3px;
+		border-bottom: 1px solid #000000 !important;
+	}
+	.eloTable td {
+		width:30%;
+		max-width:300px;
+		border: none;
+		text-align: left;
+		padding: 8px;
+	}
+	.eloTable tr:nth-child(even) {
+		background-color: #E2C3E5;
+	}
+	.matchForm form{
+		max-width:95%;
+		margin: 20px auto;
+		border: 1px solid #993399;
+		border-radius: 25px;
+		padding: 20px 20px;
+	}
+
 </style>
 
 </head>
@@ -63,6 +71,10 @@
 
 <!-- NEW MATCH FORM -->
 <div style="margin: 0 auto;"  ng-controller="formController as formCtrl">
+	<form class="matchForm">
+
+	</form>
+    
     <p ng-repeat="p in persons"> 
     	Name: {{p.name}}  ELO: {{p.elo}}  matches: {{p.matches}}
     </p>
@@ -74,6 +86,7 @@
 
     <h1 style="text-align:center; padding-bottom:20px">Current Rankings</h1>
     
+    <!-- fetched with PHP-PDO<->MySQL -->
     <?php
         echo "<table class='eloTable' style='max-width:95%; margin: 0 auto;'>";
         echo "<tr><th>Name</th><th>ELO</th><th>matches</th></tr>";
