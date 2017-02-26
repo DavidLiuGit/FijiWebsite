@@ -73,48 +73,47 @@
 <!-- NEW MATCH FORM -->
 <div style="margin: 0 auto;"  ng-controller="formController as formCtrl">
 	<form name="match" class="matchForm">
-    	
+
         <!-- drop-down list, for selecting player 1; -->
-		<select name="singleSelect1" id="singleSelect" ng-model="sel1" >		<!-- ng-model binds selected data to specified var -->
-    		<option ng-repeat="p in records" value="{{p.id}}">{{p.name}}</option> 
+		<select name="singleSelect1" id="singleSelect" ng-model="formCtrl.sel1" >		<!-- ng-model binds selected data to specified var -->
+    		<option ng-repeat="p in persons" value="{{p.id}}">{{p.name}}</option>
 		</select>
-        
+
         <!-- drop-down list, for selecting player 1; -->
-		<select name="singleSelect2" id="singleSelect" ng-model="sel2" >		<!-- ng-model binds selected data to specified var -->
-    		<option ng-repeat="p in records" value="{{p.id}}">{{p.name}}</option> 
+		<select name="singleSelect2" id="singleSelect" ng-model="formCtrl.sel2" >		<!-- ng-model binds selected data to specified var -->
+    		<option ng-repeat="p in persons" value="{{p.id}}">{{p.name}}</option>
 		</select>
 	</form>
-    
-    {{persons[1].name}}<br>
-    <p ng-repeat="p in persons"> 
+
+    <p ng-repeat="p in persons">
     	Name: {{p.name}}  ELO: {{p.elo}}  matches: {{p.matches}}
     </p>
 </div>
 
-<script src="eloNG.js"></script>	
+<script src="eloNG.js"></script>
 
 <div style="margin:40px auto; max-width:95%">
 
     <h1 style="text-align:center; padding-bottom:20px">Current Rankings</h1>
-    
+
     <!-- fetched with PHP-PDO<->MySQL -->
     <?php
         echo "<table class='eloTable' style='max-width:95%; margin: 0 auto;'>";
         echo "<tr><th>Name</th><th>ELO</th><th>matches</th></tr>";
-    
+
         class TableRows extends RecursiveIteratorIterator {
             function __construct($it) {
                 parent::__construct($it, self::LEAVES_ONLY);
             }
-    
+
             function current() {
                 return "<td>" . parent::current(). "</td>";
             }
-    
+
             function beginChildren() {
                 echo "<tr>";
             }
-    
+
             function endChildren() {
                 echo "</tr>" . "\n";
         }
@@ -123,11 +122,11 @@
         $username = "public";               // provide username
         $password = "123456";             	// provide password
         $myDB = "tournamentDB";
-    
+
         // create connection
         try {
             $conn = new PDO ("mysql:host=$servername;dbname=$myDB", $username, $password);
-    
+
             // set PDO error mode to exception
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             //echo "Connected successfully<br>";
@@ -135,7 +134,7 @@
         catch(PDOException $e){
             echo "Connection failed: " . $e->getMessage();
         }
-    
+
         try{
             // select - prepare a select statement
             //echo "Preparing query<br>";
@@ -143,16 +142,16 @@
             //echo "Query prepared<br>";
             $stmt->execute();
             //echo "Executing query...<br>";
-    
+
             $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);    // set the resulting array to associative
-    
+
             foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
                 echo $v;
             }
         } catch (PDOException $e){
             echo "Error while executing query: " . $stmt . "<br>" . $e->getMessage();
         }
-    
+
         $conn = null;				// close the connection
         echo "</table>";
     ?>
