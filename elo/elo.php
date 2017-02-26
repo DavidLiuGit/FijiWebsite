@@ -8,6 +8,7 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css">
 
 <script src="../js/angular.min.js"></script>	<!-- Angular -->
+				<!-- elo AngularJS script -->
 
 <style>		<!-- table style -->
 .eloTable table{
@@ -36,7 +37,6 @@
 
 </head>
 
-<body ng-app='eloModule'>
 <nav class="main-nav-outer" id="test"><!--main-nav-start-->
 	<div class="container">
         <ul class="main-nav">
@@ -54,7 +54,7 @@
 <!--main-nav-end-->
 
 <!-- main body begin -->
-
+<body >
 <!-- heading -->
 <div style="margin:25px auto">
 	<h1 style="text-align:center"> Welcome to the Fiji ELO System!</h1>
@@ -63,14 +63,13 @@
 
 
 <!-- NEW MATCH FORM -->
-<div style="margin: 0 auto;" ng-controller="formController as formCtrl">
-	
+<div style="margin: 0 auto;" ng-app="eloModule" ng-controller="formController as formCtrl">
     <p ng-repeat="p in persons"> 
     	Name: {{p.name}}  ELO: {{p.elo}}  matches: {{p.matches}}
     </p>
-    
 </div>
 
+<script src="eloNG.js"></script>	
 
 <div style="margin:40px auto; max-width:95%">
 
