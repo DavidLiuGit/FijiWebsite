@@ -36,8 +36,9 @@
             $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);    // set the resulting array to associative
     
 			$outp = "";
-            while ($row = $sth->fetch(PDO::FETCH_ASSOC)) {
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
    				//echo $row['First_Name'] . ' ' . $row['Surname'] . "\n";
+   				if ($outp != "" ){$outp .= "," ;}
 				$outp .= '{"id":"'  . $row["id"] . '",';
     			$outp .= '"name":"'   . $row["name"]        . '",';
 				$outp .= '"elo":"'   . $row["elo"]        . '",';
@@ -46,11 +47,12 @@
 			}
 			$outp ='{"records":['.$outp.']}';
 			
+			echo ($outp);			
         } catch (PDOException $e){
             echo "Error while executing query: " . $stmt . "<br>" . $e->getMessage();
         }
     	
-		echo $outp;
+		
         $conn = null;				// close the connection
         //echo "</table>";
     ?>
