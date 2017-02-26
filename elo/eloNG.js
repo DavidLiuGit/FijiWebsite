@@ -28,14 +28,14 @@
 					selA2: $scope.selA2,
 					selB1: $scope.selB1,
 					selB2: $scope.selB2,
-					winnerA: this.winnerA
+					winnerA: $scope.winnerA
 				},
 				headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
 			});
 			
 			/* Check whether the HTTP Request is successful or not. */
 			request.success(function (data) {
-				//document.getElementById("message").textContent = "You have login successfully with email "+data;
+				document.getElementById("message").textContent = "PHP responded with " + data;
 				console.log(data);		// print PHP data in console
 			});
 		};

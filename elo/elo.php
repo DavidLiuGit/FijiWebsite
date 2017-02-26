@@ -98,6 +98,7 @@
 
         <button ng-disabled="!selA1 || !selB1" ng-click="newMatch()" class="btn btn-default">Submit Match</button>
 
+		<p id="message">kek</p>
 	</form>
 
 
