@@ -7,8 +7,7 @@
 	        $scope.persons = response.data.records;
         });
 
-		//this.records = $scope.persons;
-
+		// pass these values to the server (php) and let the server compute scores
 		this.selA1 = null;
 		this.selA2 = null;
 		this.selB1 = null;

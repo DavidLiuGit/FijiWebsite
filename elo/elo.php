@@ -6,9 +6,12 @@
 <title>ELO</title>
 
 <link href="../css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/bootstrap-select.min.css">	<!-- Bootstrap select CSS -->
 
+<script src="../js/jquery.1.8.3.min.js"></script>
 <script src="../js/angular.min.js"></script>	<!-- Angular -->
-				<!-- elo AngularJS script -->
+<script src="../js/bootstrap-select.js"></script>
+				
 
 <style>		<!-- table style -->
 	.eloTable table{
@@ -21,7 +24,7 @@
 	    text-align: left;
 	    padding: 2px 8px;
 	    margin-bottom: 3px;
-		border-bottom: 1px solid #000000 !important;
+		border-bottom: 2px solid #000000 !important;
 	}
 	.eloTable td {
 		width:30%;
@@ -34,7 +37,7 @@
 		background-color: #E2C3E5;
 		border: 1px solid #E2C3E5;
 	}
-	.matchForm form{
+	.matchForm{
 		max-width:95%;
 		margin: 20px auto;
 		border: 1px solid #993399;
@@ -76,7 +79,8 @@
 	<form name="match" class="matchForm">
 
         <!-- drop-down list, for selecting player 1; -->
-		<select name="singleSelect1" id="singleSelect" ng-model="formCtrl.selA1" >		<!-- ng-model binds selected data to specified var -->
+		<select name="singleSelect1" id="singleSelect" ng-model="formCtrl.selA1" 
+        	class="selectpicker" data-live-search="true">		<!-- ng-model binds selected data to specified var -->
     		<option ng-repeat="p in persons" value="{{p.id}}">{{p.name}}</option>
 		</select>
 		<br>
@@ -86,7 +90,10 @@
 		</select>
 	</form>
 
-    
+
+
+	<!-- Ranking table -->
+    <h1 style="text-align:center; padding-bottom:20px">Current Rankings</h1>
     <table class='eloTable' style='max-width:95%; margin: 0 auto;'>
     	<tr><th>Name</th><th>ELO</th><th>matches</th></tr>								<!-- table header -->
         <tr ng-repeat="p in persons">
@@ -95,11 +102,13 @@
     </table>
 </div>
 
-<script src="eloNG.js"></script>
+
+<script src="eloNG.js"></script>			<!-- elo AngularJS script -->
+
 
 <div style="margin:40px auto; max-width:95%">
 
-    <h1 style="text-align:center; padding-bottom:20px">Current Rankings</h1>
+    
 
     <!-- fetched with PHP-PDO<->MySQL 
     <?php
