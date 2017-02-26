@@ -9,8 +9,11 @@
 
 		//this.records = $scope.persons;
 
-		this.sel1 = null;
-		this.sel2 = null;
+		this.selA1 = null;
+		this.selA2 = null;
+		this.selB1 = null;
+		this.selB2 = null;
+		this.winnerA = null;		// which team won?
     });
 
 })();

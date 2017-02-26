@@ -75,19 +75,27 @@
 	<form name="match" class="matchForm">
 
         <!-- drop-down list, for selecting player 1; -->
-		<select name="singleSelect1" id="singleSelect" ng-model="formCtrl.sel1" >		<!-- ng-model binds selected data to specified var -->
+		<select name="singleSelect1" id="singleSelect" ng-model="formCtrl.selA1" >		<!-- ng-model binds selected data to specified var -->
     		<option ng-repeat="p in persons" value="{{p.id}}">{{p.name}}</option>
 		</select>
-
+		<br>
         <!-- drop-down list, for selecting player 1; -->
-		<select name="singleSelect2" id="singleSelect" ng-model="formCtrl.sel2" >		<!-- ng-model binds selected data to specified var -->
+		<select name="singleSelect2" id="singleSelect" ng-model="formCtrl.selB1" >		<!-- ng-model binds selected data to specified var -->
     		<option ng-repeat="p in persons" value="{{p.id}}">{{p.name}}</option>
 		</select>
 	</form>
 
     <p ng-repeat="p in persons">
     	Name: {{p.name}}  ELO: {{p.elo}}  matches: {{p.matches}}
+        
     </p>
+    
+    <table class='eloTable' style='max-width:95%; margin: 0 auto;'>
+    	<tr><th>Name</th><th>ELO</th><th>matches</th></tr>								<!-- table header -->
+        <tr ng-repeat="p in persons">
+        	<td>{{p.name}}</td><td>{{p.elo}}</td><td>{{p.matches}}</td>
+        </tr>
+    </table>
 </div>
 
 <script src="eloNG.js"></script>
