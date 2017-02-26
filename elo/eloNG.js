@@ -3,16 +3,41 @@
     var app = angular.module ( 'eloModule', [ ] );		// create module - eloModule
 
     app.controller ( 'formController', function($scope, $http){
+		
 	    $http.get("fetchAllPublic.php").then( function (response) {
 	        $scope.persons = response.data.records;
         });
 
 		// pass these values to the server (php) and let the server compute scores
-		this.selA1 = null;
-		this.selA2 = null;
-		this.selB1 = null;
-		this.selB2 = null;
-		this.winnerA = null;		// which team won?
+		$scope.selA1 = null;
+		$scope.selA2 = null;
+		$scope.selB1 = null;
+		$scope.selB2 = null;
+		$scope.winnerA = null;		// which team won?
+		
+		
+		
+		// make http request to PHP
+		$scope.newMatch = function () {
+	
+			var request = $http({
+				method: "post",
+				url: "update.php",
+				data: {
+					selA1: $scope.selA1,
+					selA2: $scope.selA2,
+					selB1: $scope.selB1,
+					selB2: $scope.selB2,
+					winnerA: this.winnerA
+				},
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+			});
+			
+			/* Check whether the HTTP Request is successful or not. */
+			request.success(function (data) {
+				//document.getElementById("message").textContent = "You have login successfully with email "+data;
+				console.log(data);		// print PHP data in console
+			});
+		};
     });
-
 })();

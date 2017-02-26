@@ -84,15 +84,20 @@
 
         <!-- drop-down list, for selecting player 1; -->
 		<select id="singleSelect" ng-model="formCtrl.selA1" class="selectpicker show-tick" 
-        	data-live-search="true" title="Select Player 1..." data-tokens="{{p.name + p.nickname}}">			<!-- ng-model binds selected data to specified var -->
+        	data-live-search="true" title="Select Player 1...">			<!-- ng-model binds selected data to specified var -->
     		<option ng-repeat="p in persons" value="{{p.id}}">{{p.name}}</option>
 		</select>
 		<br>
-        <!-- drop-down list, for selecting player 1; -->
+        
+        <!-- drop-down list, for selecting player 2; -->
 		<select id="singleSelect" ng-model="formCtrl.selB1" class="selectpicker show-tick" 
-        	data-live-search="true" title="Select Player 1...">		<!-- ng-model binds selected data to specified var -->
+        	data-live-search="true" title="Select Player 2...">		<!-- ng-model binds selected data to specified var -->
     		<option ng-repeat="p in persons" value="{{p.id}}">{{p.name}}</option>
 		</select>
+        <br>
+        
+        <button ng-disabled="!selA1 || !selB1" ng-click="newMatch()" class="btn btn-default">Submit Match</button>
+        
 	</form>
 
 
