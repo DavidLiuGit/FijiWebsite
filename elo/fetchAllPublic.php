@@ -49,9 +49,10 @@
         } catch (PDOException $e){
             echo "Error while executing query: " . $stmt . "<br>" . $e->getMessage();
         }
-    
+    	
+		echo $outp;
         $conn = null;				// close the connection
-        echo "</table>";
+        //echo "</table>";
     ?>
 
 </body>

@@ -36,7 +36,7 @@
 
 </head>
 
-<body>
+<body ng-app='eloModule'>
 <nav class="main-nav-outer" id="test"><!--main-nav-start-->
 	<div class="container">
         <ul class="main-nav">
