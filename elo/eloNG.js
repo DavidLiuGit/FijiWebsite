@@ -21,8 +21,11 @@
 		$scope.newMatch = function () {
 			
 			var data = $.param({
-                fName: $scope.selA1,
-                lName: $scope.selB1
+                selA1: $scope.selA1,
+                selB1: $scope.selB1,
+				selA2: $scope.selA2,
+                selB2: $scope.selB2,
+				winnerA: $scope.winnerA
             });
 			
 			var config = {
@@ -31,11 +34,9 @@
                 }
             };
 	
-			$http.post('update.php', data, config)
-				.success(function (data) {
-					document.getElementById("message").textContent = "PHP responded with " + data;
-					console.log(data);		// print PHP data in console
-				});
+			$http.post('update.php', data, config).then( function (data) {
+				console.log(data);		// print PHP data in console
+			});
 		};
     });
 })();
