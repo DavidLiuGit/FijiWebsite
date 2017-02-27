@@ -19,22 +19,23 @@
 		
 		// make http request to PHP
 		$scope.newMatch = function () {
+			
+			var data = $.param({
+                fName: $scope.selA1,
+                lName: $scope.selB1
+            });
+			
+			var config = {
+                headers : {
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+                }
+            };
 	
-			$http({
-				method: "POST",
-				url: "update.php",
-				data: {
-					selA1: $scope.selA1,
-					selA2: $scope.selA2,
-					selB1: $scope.selB1,
-					selB2: $scope.selB2,
-					winnerA: $scope.winnerA
-				},
-				headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-			}).success(function (data) {
-				document.getElementById("message").textContent = "PHP responded with " + data;
-				console.log(data);		// print PHP data in console
-			});
+			$http.post('update.php', data, config)
+				.success(function (data) {
+					document.getElementById("message").textContent = "PHP responded with " + data;
+					console.log(data);		// print PHP data in console
+				});
 		};
     });
 })();
