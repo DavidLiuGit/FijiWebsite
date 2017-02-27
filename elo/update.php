@@ -89,6 +89,39 @@
 	$newB1 = $eloB1 + $d_B;
 	$newB2 = $eloB2 + $d_B;
 	echo " newScores:" . $newA1 .",". $newB1;
+	
+	
+	// update database with new ELO scores
+	$stmt = $conn->prepare("UPDATE tournament SET elo=:newElo WHERE id=:playerID");
+	$stmt->bindParam(':elo', $newElo);
+    $stmt->bindParam(':playerID', $id);
+	
+	try {
+		// player A1
+		$newElo = $newA1;		
+		$playerID = $idA1;
+		$stmt->execute();
+		
+		// player B1
+		$newElo = $newB1;		
+		$playerID = $idB1;
+		$stmt->execute();
+		
+		// player A2
+		$newElo = $newA2;		
+		$playerID = $idA2;
+		$stmt->execute();
+		
+		// player B2
+		$newElo = $newB2;		
+		$playerID = $idB2;
+		$stmt->execute();
+		
+		echo " Update query successful";
+	} catch ( PDOexception $e ){
+		echo " Update query unsuccesful!"
+	}
+	
 
 	$conn = null;
 
