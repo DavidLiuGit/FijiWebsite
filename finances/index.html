@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Finances</title>
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/bootstrap-select.css">		<!-- Bootstrap select CSS -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="../js/bootstrap-select.js"></script>
+<script src="../js/angular.min.js"></script>	<!-- Angular -->
+
+
+<style>		<!-- table style -->
+	.eloTable table{
+		border:none;
+		border-collapse: collapse;
+		max-width:95%;
+	}
+	.eloTable th{
+		border: none;
+	    text-align: left;
+	    padding: 2px 8px;
+	    margin-bottom: 3px;
+		border-bottom: 2px solid #000000 !important;
+	}
+	.eloTable td {
+		width:30%;
+		max-width:300px;
+		border: none;
+		text-align: left;
+		padding: 8px;
+	}
+	.eloTable tr:nth-child(even) {
+		background-color: #E2C3E5;
+		border: 1px solid #E2C3E5;
+	}
+	.matchForm{
+		max-width:95%;
+		margin: 20px auto;
+		border: 1px solid #993399;
+		border-radius: 25px;
+		padding: 20px 20px;
+	}
+
+</style>
+
+</head>
+<body ng-app="eloModule">
+
+<script src="eloNG.js"></script>			<!-- elo AngularJS script -->
+
+
+<nav class="main-nav-outer" id="test">		<!--main-nav-start-->
+	<div class="container">
+        <ul class="main-nav">
+        	<li><a href="../index.html">Home</a></li>
+            <li><a href="#service">Chapter</a></li>
+            <li><a href="#Portfolio">Events</a></li>
+            <li class="small-logo"><a href="#header"><img src="../img/FijiShieldLogo.png" alt="" width="100" height="105"></a></li>
+            <li><a href="#client">Grads</a></li>
+            <li><a href="#team">Fiji</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
+    </div>
+</nav>
+<!--main-nav-end-->
+
+<!-- main body begin -->
+<!-- heading -->
+<div style="margin:25px auto">
+	<h1 style="text-align:center"> Welcome to the Fiji ELO System!</h1>
+    <h3 style="text-align:center; color:#4F4F4F">For all your ranking needs</h3>
+</div>
+
+
+
+<!-- NEW MATCH FORM -->
+<div style="margin: 0 auto;"  ng-controller="tableController as tableCtrl">
+	
+	<!-- Ranking table -->
+    <h1 style="text-align:center; padding-bottom:20px">Current Rankings</h1>
+    <table class='eloTable' style='max-width:95%; margin: 0 auto;'>
+    	<tr><th>Name</th><th>Balance</th></tr>								<!-- table header -->
+        <tr ng-repeat="p in persons">
+        	<td>{{p.name}}</td><td>{{p.open_balance}}</td>
+        </tr>
+    </table>
+    
+</div>
+
+
+</body>
+</html>

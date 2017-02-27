@@ -5,7 +5,7 @@ header("Content-Type: application/json; charset=UTF-8");
 $servername = "127.0.0.1";       	// or the server/domain name
     $username = "public";               // provide username
     $password = "123456";             	// provide password
-    $myDB = "tournamentDB";
+    $myDB = "financesDB";
 
     // create connection
     try {
@@ -22,7 +22,7 @@ $servername = "127.0.0.1";       	// or the server/domain name
     try{
         // select - prepare a select statement
 		// attributes: id, name, elo, matches, nickname
-        $stmt = $conn->prepare("SELECT * FROM finances ORDER BY Open_Balance DESC, id ASC"); // fetch from tournament table
+        $stmt = $conn->prepare("SELECT * FROM finances ORDER BY id ASC"); // fetch from tournament table
         //echo "Query prepared<br>";
         $stmt->execute();
         //echo "Executing query...<br>";
