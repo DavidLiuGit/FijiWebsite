@@ -1,3 +1,5 @@
+DROP TABLE tournament;	-- in case table is already defined
+
 CREATE TABLE tournament (
     `id` INT,
     `name` VARCHAR(20) CHARACTER SET utf8,

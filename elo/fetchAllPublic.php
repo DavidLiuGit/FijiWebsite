@@ -22,7 +22,7 @@
         try{
             // select - prepare a select statement
 			// attributes: id, name, elo, matches, nickname
-            $stmt = $conn->prepare("SELECT * FROM tournament ORDER BY elo,id"); // fetch from tournament table
+            $stmt = $conn->prepare("SELECT * FROM tournament ORDER BY elo desc, id asc"); // fetch from tournament table
             //echo "Query prepared<br>";
             $stmt->execute();
             //echo "Executing query...<br>";
