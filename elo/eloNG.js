@@ -20,8 +20,8 @@
 		// make http request to PHP
 		$scope.newMatch = function () {
 	
-			var request = $http({
-				method: "post",
+			$http({
+				method: "POST",
 				url: "update.php",
 				data: {
 					selA1: $scope.selA1,
@@ -31,10 +31,7 @@
 					winnerA: $scope.winnerA
 				},
 				headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-			});
-			
-			/* Check whether the HTTP Request is successful or not. */
-			request.success(function (data) {
+			}).success(function (data) {
 				document.getElementById("message").textContent = "PHP responded with " + data;
 				console.log(data);		// print PHP data in console
 			});
