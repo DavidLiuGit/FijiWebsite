@@ -13,8 +13,7 @@
 
 	echo "Data received: " . $idA1 . " " . $idB1 . ", winnerA: " .$winA;
 
-
-	// get current scores of players
+	// initiaalize connection details
 	$servername = "127.0.0.1";       	// localhost - server that runs this PHP file also has MySQL db
     $username = "tournamentAdmin";      // provide username
     $password = "prophet";             	// provide password
@@ -32,7 +31,8 @@
         echo " Connection failed: " . $e->getMessage();
     }
 
-    $stmt = $conn->prepare("SELECT elo FROM tournament WHERE id=:playerID");		// get ELO
+	// get current ELO score of players in match
+    $stmt = $conn->prepare("SELECT elo FROM tournament WHERE id=:playerID");		
     $stmt->bindParam(':playerID', $idA1);
 	try{
 		$id = $idA1;						// player A1
@@ -62,8 +62,28 @@
 	} catch ( PDOException $e ) {
 		echo "Score query unsuccesful!";
 	}
-
-	echo "Scores fetched: " . $eloA1 . " " . $eloB1;
+	
+	echo ($idA1 && $idA2);
+	
+	
+	// compute average score for each team
+	$eloA = ($idA1 && $idA2) ? ($eloA1+$eloA2)/2 : $eloA1;
+	$eloB = ($idB1 && $idB2) ? ($eloB1+$eloB2)/2 : $eloB1;
+	
+	// compute expected: E = 1 / ( 1 + 10 ^ ( (R_opp - R_myTeam) / 400 ) )
+	
+	$E_a = 1 / ( 1 + pow ( 10, ($eloB - $eloA) / 400 );
+	$E_b = 1 / ( 1 + pow ( 10, ($eloA - $eloB) / 400 );
+	
+	// compute delta for each team: k ( S + E ),	where k is a constant defined below; S = { 1 for win, 0 for loss }
+	// WolframAlpha chart: plot 50(1- (1/(1+10^(x/400)))), 50(0- (1/(1+10^(x/400)))) for x = [-500,500] 				for k = 50
+	$k = 50;
+	$d_A = $k * ( ($winA)?1:0 - $E_a );
+	$d_B = $k * ( ($winA)?0:1 - $E_b );
+	
+	echo " Deltas:" . $d_a . " " . $d_b;
+	
 	$conn = null;
 
 ?>
+}
