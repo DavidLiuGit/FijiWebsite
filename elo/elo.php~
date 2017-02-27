@@ -7,14 +7,8 @@
 
 <link href="../css/style.css" rel="stylesheet" type="text/css">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" href="../css/bootstrap-select.css">		<!-- Bootstrap select CSS -->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="../js/bootstrap-select.js"></script>
 <script src="../js/angular.min.js"></script>	<!-- Angular -->
-
+				<!-- elo AngularJS script -->
 
 <style>		<!-- table style -->
 	.eloTable table{
@@ -27,7 +21,7 @@
 	    text-align: left;
 	    padding: 2px 8px;
 	    margin-bottom: 3px;
-		border-bottom: 2px solid #000000 !important;
+		border-bottom: 1px solid #000000 !important;
 	}
 	.eloTable td {
 		width:30%;
@@ -38,9 +32,8 @@
 	}
 	.eloTable tr:nth-child(even) {
 		background-color: #E2C3E5;
-		border: 1px solid #E2C3E5;
 	}
-	.matchForm{
+	.matchForm form{
 		max-width:95%;
 		margin: 20px auto;
 		border: 1px solid #993399;
@@ -52,8 +45,6 @@
 
 </head>
 <body ng-app="eloModule">
-
-<script src="eloNG.js"></script>			<!-- elo AngularJS script -->
 
 <nav class="main-nav-outer" id="test"><!--main-nav-start-->
 	<div class="container">
@@ -79,68 +70,51 @@
 </div>
 
 
-
 <!-- NEW MATCH FORM -->
 <div style="margin: 0 auto;"  ng-controller="formController as formCtrl">
 	<form name="match" class="matchForm">
-
+    	
         <!-- drop-down list, for selecting player 1; -->
-		<select id="singleSelect" ng-model="selA1" class="selectpicker show-tick"
-        	data-live-search="true" title="Select Player 1...">			<!-- ng-model binds selected data to specified var -->
-    		<option ng-repeat="p in persons" value="{{p.id}}">{{p.name}}</option>
+		<select name="singleSelect1" id="singleSelect" ng-model="sel1" >		<!-- ng-model binds selected data to specified var -->
+    		<option ng-repeat="p in records" value="{{p.id}}">{{p.name}}</option> 
 		</select>
-		<br>
-
-        <!-- drop-down list, for selecting player 2; -->
-		<select id="singleSelect" ng-model="selB1" class="selectpicker show-tick"
-        	data-live-search="true" title="Select Player 2...">		<!-- ng-model binds selected data to specified var -->
-    		<option ng-repeat="p in persons" value="{{p.id}}">{{p.name}}</option>
+        
+        <!-- drop-down list, for selecting player 1; -->
+		<select name="singleSelect2" id="singleSelect" ng-model="sel2" >		<!-- ng-model binds selected data to specified var -->
+    		<option ng-repeat="p in records" value="{{p.id}}">{{p.name}}</option> 
 		</select>
-        <br>
-
-        <button ng-click="newMatch()" class="btn btn-default">Submit Match</button>
-
-		<p id="message">kek</p>
 	</form>
-
-
-
-	<!-- Ranking table -->
-    <h1 style="text-align:center; padding-bottom:20px">Current Rankings</h1>
-    <table class='eloTable' style='max-width:95%; margin: 0 auto;'>
-    	<tr><th>Name</th><th>ELO</th><th>matches</th></tr>								<!-- table header -->
-        <tr ng-repeat="p in persons">
-        	<td>{{p.name}}</td><td>{{p.elo}}</td><td>{{p.matches}}</td>
-        </tr>
-    </table>
+    
+    {{persons[1].name}}<br>
+    <p ng-repeat="p in persons"> 
+    	Name: {{p.name}}  ELO: {{p.elo}}  matches: {{p.matches}}
+    </p>
 </div>
 
-
-
-
+<script src="eloNG.js"></script>	
 
 <div style="margin:40px auto; max-width:95%">
 
-
-
-    <!-- fetched with PHP-PDO<->MySQL
+    <h1 style="text-align:center; padding-bottom:20px">Current Rankings</h1>
+    
+    <!-- fetched with PHP-PDO<->MySQL -->
     <?php
         echo "<table class='eloTable' style='max-width:95%; margin: 0 auto;'>";
         echo "<tr><th>Name</th><th>ELO</th><th>matches</th></tr>";
-
+    
         class TableRows extends RecursiveIteratorIterator {
             function __construct($it) {
                 parent::__construct($it, self::LEAVES_ONLY);
             }
-
+    
             function current() {
                 return "<td>" . parent::current(). "</td>";
             }
-
+    
             function beginChildren() {
                 echo "<tr>";
             }
-
+    
             function endChildren() {
                 echo "</tr>" . "\n";
         }
@@ -149,11 +123,11 @@
         $username = "public";               // provide username
         $password = "123456";             	// provide password
         $myDB = "tournamentDB";
-
+    
         // create connection
         try {
             $conn = new PDO ("mysql:host=$servername;dbname=$myDB", $username, $password);
-
+    
             // set PDO error mode to exception
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             //echo "Connected successfully<br>";
@@ -161,7 +135,7 @@
         catch(PDOException $e){
             echo "Connection failed: " . $e->getMessage();
         }
-
+    
         try{
             // select - prepare a select statement
             //echo "Preparing query<br>";
@@ -169,20 +143,20 @@
             //echo "Query prepared<br>";
             $stmt->execute();
             //echo "Executing query...<br>";
-
+    
             $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);    // set the resulting array to associative
-
+    
             foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
                 echo $v;
             }
         } catch (PDOException $e){
             echo "Error while executing query: " . $stmt . "<br>" . $e->getMessage();
         }
-
+    
         $conn = null;				// close the connection
         echo "</table>";
     ?>
-	-->
+
 </div>
 
 </body>
