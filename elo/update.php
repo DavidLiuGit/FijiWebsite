@@ -92,7 +92,7 @@
 
 
 	// update database with new ELO scores
-	$stmt = $conn->prepare("UPDATE tournament SET elo=:newElo matches=matches+1 WHERE id=:playerID");
+	$stmt = $conn->prepare("UPDATE tournament SET elo=:newElo, matches=matches+1 WHERE id=:playerID");
 	$stmt->bindParam(':newElo', $newElo);
     $stmt->bindParam(':playerID', $playerID);
 
