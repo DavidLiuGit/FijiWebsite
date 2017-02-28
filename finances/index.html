@@ -39,16 +39,23 @@
 	.neg {
 		color:#6FC838;
 	}
+	<!-- temporarily disable styling of every other child
 	.eloTable tr:nth-child(even) {
 		background-color: #E9D3EB;
 		border: 1px solid #E9D3EB;
-	}
+	}-->
 	.matchForm{
 		max-width:95%;
 		margin: 20px auto;
 		border: 1px solid #993399;
 		border-radius: 25px;
 		padding: 20px 20px;
+	}
+	.navTab{
+		width: 100px;
+	}
+	.navTab a {
+		text-align:center;
 	}
 
 </style>
@@ -92,8 +99,8 @@
 
     <!-- tabs -->
     <ul class="nav nav-tabs" style="margin:0 auto; width:300px">
-    	<li ng-class="{active:tab === 1}" style="width: 100px"> <a href ng-click="setTab(1)" style="text-align:center"> Undergrad </a> </li>
-    	<li ng-class="{active:tab === 0}" style="width: 100px"> <a href ng-click="setTab(0)" style="text-align:center"> Grad </a> </li>
+    	<li ng-class="{active:tab === 1}" class="navTab"> <a href ng-click="setTab(1)"> Undergrad </a> </li>
+    	<li ng-class="{active:tab === 0}" class="navTab"> <a href ng-click="setTab(0)"> Grad </a> </li>
     </ul>
 
 	<!-- undergrads table -->
