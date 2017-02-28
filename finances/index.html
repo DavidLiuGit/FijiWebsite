@@ -36,9 +36,12 @@
 		text-align: left;
 		padding: 8px;
 	}
+	.neg {
+		color:#6FC838;
+	}
 	.eloTable tr:nth-child(even) {
-		background-color: #E2C3E5;
-		border: 1px solid #E2C3E5;
+		background-color: #E9D3EB;
+		border: 1px solid #E9D3EB;
 	}
 	.matchForm{
 		max-width:95%;
@@ -76,7 +79,7 @@
 <!-- heading -->
 <div style="margin:25px auto">
 	<h1 style="text-align:center">Fiji TK - Finances Data</h1>
-    <h3 style="text-align:center; color:#4F4F4F">So we know who the delinquents are/h3>
+    <h3 style="text-align:center; color:#4F4F4F">So we know who the delinquents are</h3>
 </div>
 
 
@@ -85,13 +88,22 @@
 <div style="margin: 0 auto;"  ng-controller="tableController as tableCtrl">
 	
 	<!-- Ranking table -->
-    <h1 style="text-align:center; padding-bottom:20px">Current Rankings</h1>
-    <table class='eloTable' style='max-width:95%; margin: 0 auto;'>
-    	<tr><th>Name</th><th>Balance</th></tr>								<!-- table header -->
-        <tr ng-repeat="p in persons">
-        	<td>{{p.name}}</td><td>{{p.open_balance}}</td>
-        </tr>
-    </table>
+    <h1 style="text-align:center; margin-top: 35px; padding-bottom:20px">Current Balances</h1>
+    
+    <!-- tabs -->
+    <ul class="nav nav-pills" style="margin:0 auto; width:200px">
+    	<li style="width: 90px"> <a href ng-click="tab = 1" style="text-align:center"> Undergrad </a> </li>
+    	<li style="width: 90px"> <a href ng-click="setTab(0)" style="text-align:center"> Grad </a> </li>
+    </ul>
+    
+    <div ng-show="tab===1">
+        <table class='eloTable' style='max-width:95%; margin: 0 auto;'>
+            <tr><th>Name</th><th>Balance</th></tr>								<!-- table header -->
+            <tr ng-repeat="p in persons">
+                <td>{{p.name}}</td><td ng-class="neg:p.open_balance<0">{{p.open_balance}}</td>
+            </tr>
+        </table>
+    </div>
     
 </div>
 
