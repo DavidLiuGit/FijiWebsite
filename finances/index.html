@@ -91,15 +91,24 @@
     <h1 style="text-align:center; margin-top: 35px; padding-bottom:20px">Current Balances</h1>
     
     <!-- tabs -->
-    <ul class="nav nav-pills" style="margin:0 auto; width:200px">
-    	<li style="width: 90px"> <a href ng-click="tab = 1" style="text-align:center"> Undergrad </a> </li>
-    	<li style="width: 90px"> <a href ng-click="setTab(0)" style="text-align:center"> Grad </a> </li>
+    <ul class="nav nav-pills" style="margin:0 auto; width:300px">
+    	<li style="width: 100px"> <a href ng-click="tab = 1" style="text-align:center"> Undergrad </a> </li>
+    	<li style="width: 100px"> <a href ng-click="setTab(0)" style="text-align:center"> Grad </a> </li>
     </ul>
     
     <div ng-show="tab===1">
         <table class='eloTable' style='max-width:95%; margin: 0 auto;'>
             <tr><th>Name</th><th>Balance</th></tr>								<!-- table header -->
-            <tr ng-repeat="p in persons">
+            <tr ng-repeat="p in persons" ng-show="p.undergrad===1">
+                <td>{{p.name}}</td><td ng-class="neg:p.open_balance<0">{{p.open_balance}}</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div ng-show="tab===0">
+        <table class='eloTable' style='max-width:95%; margin: 0 auto;'>
+            <tr><th>Name</th><th>Balance</th></tr>								<!-- table header -->
+            <tr ng-repeat="p in persons" ng-show="p.undergrad===0">
                 <td>{{p.name}}</td><td ng-class="neg:p.open_balance<0">{{p.open_balance}}</td>
             </tr>
         </table>
