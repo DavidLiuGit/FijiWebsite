@@ -100,7 +100,7 @@
         <table class='eloTable' style='max-width:95%; margin: 0 auto;'>
             <tr><th>Name</th><th>Balance</th></tr>								<!-- table header -->
             <tr ng-repeat="p in persons" ng-show="p.undergrad===1">
-                <td>{{p.name}}</td><td ng-class="neg:p.open_balance<0">{{p.open_balance}}</td>
+                <td>{{p.name}}</td><td>{{p.open_balance}}</td>
             </tr>
         </table>
     </div>
@@ -109,7 +109,7 @@
         <table class='eloTable' style='max-width:95%; margin: 0 auto;'>
             <tr><th>Name</th><th>Balance</th></tr>								<!-- table header -->
             <tr ng-repeat="p in persons" ng-show="p.undergrad===0">
-                <td>{{p.name}}</td><td ng-class="neg:p.open_balance<0">{{p.open_balance}}</td>
+                <td>{{p.name}}</td><td>{{p.open_balance}}</td>
             </tr>
         </table>
     </div>
