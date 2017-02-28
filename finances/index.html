@@ -91,9 +91,9 @@
     <h1 style="text-align:center; margin-top: 35px; padding-bottom:20px">Current Balances</h1>
     
     <!-- tabs -->
-    <ul class="nav nav-pills" style="margin:0 auto; width:300px">
-    	<li style="width: 100px"> <a href ng-click="tab = 1" style="text-align:center"> Undergrad </a> </li>
-    	<li style="width: 100px"> <a href ng-click="setTab(0)" style="text-align:center"> Grad </a> </li>
+    <ul class="nav nav-tabs" style="margin:0 auto; width:300px">
+    	<li ng-class="{active:tab === 1}" style="width: 100px"> <a href ng-click="setTab(1)" style="text-align:center"> Undergrad </a> </li>
+    	<li ng-class="{active:tab === 0}" style="width: 100px"> <a href ng-click="setTab(0)" style="text-align:center"> Grad </a> </li>
     </ul>
     
     <div ng-show="tab===1">
