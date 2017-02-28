@@ -6,12 +6,12 @@
 
 		// fetch undergrad finances table from DB;
 	    $http.get("fetchUndergradPublic.php").then( function (response) {
-	        $scope.undergrad.persons = response.data.records;
+	        $scope.UGpersons = response.data.records;
         });
 		
 		// fetch grad finances table from DB;
 	    $http.get("fetchGradPublic.php").then( function (response) {
-	        $scope.grad.persons = response.data.records;
+	        $scope.Gpersons = response.data.records;
         });
 		
 		$scope.tab = 1;				// undergrads is the default tab to show

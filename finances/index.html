@@ -39,11 +39,10 @@
 	.neg {
 		color:#6FC838;
 	}
-	<!-- temporarily disable styling of every other child
 	.eloTable tr:nth-child(even) {
 		background-color: #E9D3EB;
 		border: 1px solid #E9D3EB;
-	}-->
+	}
 	.matchForm{
 		max-width:95%;
 		margin: 20px auto;
@@ -107,7 +106,7 @@
     <div ng-show="tab===1">
         <table class='eloTable' style='max-width:95%; margin: 0 auto;'>
             <tr><th>Name</th><th>Balance</th></tr>								<!-- table header -->
-            <tr ng-repeat="p in undergrad.persons" ng-show="p.undergrad==1">
+            <tr ng-repeat="p in UGpersons" ng-show="p.undergrad==1">
                 <td>{{p.name}}</td><td>{{p.open_balance}}</td>
             </tr>
         </table>
@@ -117,7 +116,7 @@
     <div ng-show="tab===0">
         <table class='eloTable' style='max-width:95%; margin: 0 auto;'>
             <tr><th>Name</th><th>Balance</th></tr>
-            <tr ng-repeat="p in grad.persons" ng-show="p.undergrad==0">
+            <tr ng-repeat="p in Gpersons" ng-show="p.undergrad==0">
                 <td>{{p.name}}</td><td>{{p.open_balance}}</td>
             </tr>
         </table>
