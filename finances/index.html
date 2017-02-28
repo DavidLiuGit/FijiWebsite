@@ -86,34 +86,36 @@
 
 <!-- NEW MATCH FORM -->
 <div style="margin: 0 auto;"  ng-controller="tableController as tableCtrl">
-	
+
 	<!-- Ranking table -->
     <h1 style="text-align:center; margin-top: 35px; padding-bottom:20px">Current Balances</h1>
-    
+
     <!-- tabs -->
     <ul class="nav nav-tabs" style="margin:0 auto; width:300px">
     	<li ng-class="{active:tab === 1}" style="width: 100px"> <a href ng-click="setTab(1)" style="text-align:center"> Undergrad </a> </li>
     	<li ng-class="{active:tab === 0}" style="width: 100px"> <a href ng-click="setTab(0)" style="text-align:center"> Grad </a> </li>
     </ul>
-    
+
+	<!-- undergrads table -->
     <div ng-show="tab===1">
         <table class='eloTable' style='max-width:95%; margin: 0 auto;'>
             <tr><th>Name</th><th>Balance</th></tr>								<!-- table header -->
-            <tr ng-repeat="p in persons" ng-show="p.undergrad===1">
+            <tr ng-repeat="p in persons" ng-show="p.undergrad==1">
                 <td>{{p.name}}</td><td>{{p.open_balance}}</td>
             </tr>
         </table>
     </div>
-    
+
+    <!-- grads table -->
     <div ng-show="tab===0">
         <table class='eloTable' style='max-width:95%; margin: 0 auto;'>
-            <tr><th>Name</th><th>Balance</th></tr>								<!-- table header -->
-            <tr ng-repeat="p in persons" ng-show="p.undergrad===0">
+            <tr><th>Name</th><th>Balance</th></tr>
+            <tr ng-repeat="p in persons" ng-show="p.undergrad==0">
                 <td>{{p.name}}</td><td>{{p.open_balance}}</td>
             </tr>
         </table>
     </div>
-    
+
 </div>
 
 
